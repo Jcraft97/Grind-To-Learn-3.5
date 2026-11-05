@@ -1046,14 +1046,17 @@ namespace GrindToLearn3
 		{
 			var players = new List<IMyPlayer>();
 			MyAPIGateway.Players.GetPlayers(players, candidate => candidate.SteamUserId == sender);
+			foreach(var candidate in players)
+				Log("Command sender match displayName='" + candidate.DisplayName + "' identityId=" + candidate.IdentityId +
+					" isBot=" + candidate.IsBot + " characterIsPlayer=" + (candidate.Character != null && candidate.Character.IsPlayer));
 
-			if(players.Count == 0)
+			IMyPlayer player = players.FirstOrDefault(candidate => !candidate.IsBot);
+			if(player == null)
 			{
-				Log("ERROR: GTL command sender not found: " + sender);
+				Log("ERROR: GTL command has no human player for sender: " + sender + " matches=" + players.Count);
 				return;
 			}
 
-			IMyPlayer player = players[0];
 			long researchIdentityId = player.IdentityId;
 			var controlledEntity = player.Controller?.ControlledEntity;
 			if(controlledEntity?.ControllerInfo != null && controlledEntity.ControllerInfo.ControllingIdentityId != 0)
