@@ -1054,11 +1054,17 @@ namespace GrindToLearn3
 			}
 
 			IMyPlayer player = players[0];
+			long researchIdentityId = player.IdentityId;
+			var controlledEntity = player.Controller?.ControlledEntity;
+			if(controlledEntity?.ControllerInfo != null && controlledEntity.ControllerInfo.ControllingIdentityId != 0)
+				researchIdentityId = controlledEntity.ControllerInfo.ControllingIdentityId;
+
 			string arguments = message.Trim().Substring(4).Trim();
 			int separator = arguments.IndexOfAny(new char[] { ' ', '\t', '\r', '\n' });
 			string action = separator < 0 ? arguments : arguments.Substring(0, separator);
 			string blockName = separator < 0 ? string.Empty : arguments.Substring(separator).Trim();
 			Log("Processing command senderSteamId=" + sender + " identityId=" + player.IdentityId +
+				" researchIdentityId=" + researchIdentityId +
 				" action='" + action + "' blockName='" + blockName + "'");
 
 			if(action.Equals("help", StringComparison.OrdinalIgnoreCase) ||
@@ -1146,7 +1152,7 @@ namespace GrindToLearn3
 
 			if(learn)
 			{
-				if(!UnlockResearchGroupForPlayer(matches[0], player.IdentityId))
+				if(!UnlockResearchGroupForPlayer(matches[0], researchIdentityId))
 				{
 					RespondToPlayer(player.IdentityId, "Could not dispatch Learn request for " + matches[0].ToString() + ". Check the Space Engineers log.");
 					return;
@@ -1155,7 +1161,7 @@ namespace GrindToLearn3
 			}
 			else
 			{
-				MyVisualScriptLogicProvider.PlayerResearchLock(player.IdentityId, unlocker);
+				MyVisualScriptLogicProvider.PlayerResearchLock(researchIdentityId, unlocker);
 				RespondToPlayer(player.IdentityId, "Unlearn request sent for " + matches[0].ToString() + ". Space Engineers may retain build access until progression is reset.");
 			}
 		}
