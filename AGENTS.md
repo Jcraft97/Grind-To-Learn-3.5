@@ -72,6 +72,8 @@ The “unlearn” action may be limited by the game’s progression cache or oth
 
 For compatibility, `/gtl forget` may remain accepted as an alias, but the canonical command is `/gtl unlearn`.
 
+Observed in-game behavior: `/gtl learn` takes effect immediately, while `/gtl unlearn` does not fully revoke build access until the world is saved and reloaded. Treat save/reload as required for unlearn changes to take effect, and do not bypass the public API to force an immediate lock.
+
 ## Files you may need to touch
 
 - `Data/SPLIT_PROGRAM.txt` — grouping and normalization logic.

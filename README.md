@@ -74,6 +74,8 @@ The old `/gtl forget` name is still accepted as a compatibility alias, but the c
 
 These commands are not meant to be privileged. The mod is private and should operate on the current player’s research state rather than a server-admin override path.
 
+Observed in-game behavior: `/gtl learn` takes effect immediately, while `/gtl unlearn` may not revoke build access until the world is saved and reloaded. Treat a save/reload as required for unlearn changes to take effect.
+
 ## Important constraints
 
 ### Public API only
@@ -88,9 +90,9 @@ The game forbids direct access to `MySessionComponentResearch` in mod scripts. T
 
 This mod is for private use and should not be restricted to server admins. The in-game commands should work for the player who owns the progression state in the current session.
 
-### Expectation management for forget
+### Unlearn timing and compatibility
 
-The public progression API can lock or clear research state, but the game may still cache build permissions internally. This means a “forget” action can be limited by the game’s progression semantics or cached state, even when the call itself succeeds. The compatibility fix is to stay within the supported API and keep the flow aligned with normal Space Engineers progression behavior.
+The public progression API can lock or clear research state, but the game may still cache build permissions internally. In testing, Learn took effect immediately, while Unlearn did not take effect until the world was saved and reloaded. Keep the implementation on the supported API and do not promise immediate build-access revocation.
 
 ## Recommended workflow for updates
 
