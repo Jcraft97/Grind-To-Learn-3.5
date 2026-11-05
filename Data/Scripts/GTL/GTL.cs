@@ -1080,7 +1080,6 @@ namespace GrindToLearn3
 			bool learn = action.Equals("learn", StringComparison.OrdinalIgnoreCase) ||
 				action.Equals("unlock", StringComparison.OrdinalIgnoreCase);
 			bool unlearn = action.Equals("unlearn", StringComparison.OrdinalIgnoreCase) ||
-				action.Equals("forget", StringComparison.OrdinalIgnoreCase) ||
 				action.Equals("lock", StringComparison.OrdinalIgnoreCase);
 
 			if(!learn && !unlearn)

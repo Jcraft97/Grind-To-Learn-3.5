@@ -2,13 +2,13 @@
 
 Grind to Learn is a private Space Engineers mod that turns the base game’s research system into a grind-to-learn progression model. This means that the only way for the player to "learn" new blocks to build is by grinding down a existing block in the world.
 
-This mod is intentionally private and player-centric. It does not assume a server admin override model; instead it follows the normal player progression flow and uses the player’s own identity and research state.
+This mod is intentionally private and player-centric. It follows the normal player progression flow and uses the player’s own identity and research state.
 
 ## What this mod does
 
 - Groups many block variants into logical research buckets.
 - Rewrites the progression data used by the game so that a block set becomes learnable through the research system.
-- Provides in-game commands for learning and forgetting groups using the public progression API.
+- Provides in-game commands for learning and unlearning groups using the public progression API(this is a fix for a large bug).
 - Keeps the mod compatible with the public Space Engineers mod API surface and avoids prohibited game internals.
 
 ## Key files
@@ -20,26 +20,9 @@ This mod is intentionally private and player-centric. It does not assume a serve
 - `Data/regenerate.py` — offline generation script; not runtime code.
 - `Data/Scripts/GTL/GTL.cs` — main runtime script for progression, grind logic, command handling, and integration with the game.
 
-## Why Prosperity grouping had to be fixed
-
-The Prosperity update introduced new block variants that did not match the mod’s existing split/normalization rules. The main examples were:
-
-- H2 tank variants not joining the hydrogen tank group.
-- Closed and open sloped cockpits not mapping into the cockpit group.
-- Cable runs and server racks not being assigned to the decorative/stairs-style grouping.
-- Light variants and other normalized block families not being reduced into their expected bucket.
-
-The fix was not a game-side bug; it was a rule mismatch in the mod’s normalization logic. The mod groups blocks by normalized names, not by exact literal subtype names, so new variants must be folded into the same category as the older blocks they logically belong to.
-
 ## Block grouping model
 
-`Data/SPLIT_PROGRAM.txt` is the important file. It uses pattern rules to collapse many variants into a single progression family. Examples include:
-
-- `Cockpit` families
-- `HydrogenTank` families
-- `Light` families
-- `CableRun` families
-- `ServerRack` and decorative cluster entries
+`Data/SPLIT_PROGRAM.txt` is the important file. It uses pattern rules to collapse many variants into a single progression family.
 
 This is deliberate: Space Engineers research buckets are broader than arbitrary block subtypes, and the mod intentionally groups them to keep progression sensible and consistent with the base game’s own design.
 
@@ -63,14 +46,14 @@ This is specifically called out because the file is not a runtime mechanism and 
 
 ## Runtime commands
 
-The mod includes in-game chat commands for toggling the player’s research state without requiring admin-only permissions. The intent is to align with the player’s own progression and the default leveling/research model used by Space Engineers.
+The mod includes in-game chat commands for toggling the player’s research state. This is a temporary fix for the bug mentioned above.
 
 Available behavior is based on the public research API and player identity:
 
 - `/gtl learn <group-or-block>`
 - `/gtl unlearn <group-or-block>`
 
-The old `/gtl forget` name is still accepted as a compatibility alias, but the canonical command is `/gtl unlearn`.
+Use `/gtl unlearn` to revoke a research unlock.
 
 These commands are not meant to be privileged. The mod is private and should operate on the current player’s research state rather than a server-admin override path.
 
@@ -86,9 +69,6 @@ The game forbids direct access to `MySessionComponentResearch` in mod scripts. T
 - Prefer the research and player unlock/lock methods that are officially available.
 - Avoid assumptions that internal state is directly readable or writable from a mod script.
 
-### No admin-only gating
-
-This mod is for private use and should not be restricted to server admins. The in-game commands should work for the player who owns the progression state in the current session.
 
 ### Unlearn timing and compatibility
 

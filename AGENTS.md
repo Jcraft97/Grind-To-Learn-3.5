@@ -70,7 +70,7 @@ Do not gate behavior behind admin-only checks. The mod should operate on the cur
 
 The “unlearn” action may be limited by the game’s progression cache or other public API semantics. The correct approach is to use the supported API and keep the behavior aligned with normal game progression, not to force prohibited internals.
 
-For compatibility, `/gtl forget` may remain accepted as an alias, but the canonical command is `/gtl unlearn`.
+Use only `/gtl unlearn` to revoke a research unlock.
 
 Observed in-game behavior: `/gtl learn` takes effect immediately, while `/gtl unlearn` does not fully revoke build access until the world is saved and reloaded. Treat save/reload as required for unlearn changes to take effect, and do not bypass the public API to force an immediate lock.
 
