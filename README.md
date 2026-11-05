@@ -26,6 +26,8 @@ This mod is intentionally private and player-centric. It follows the normal play
 
 This is deliberate: Space Engineers research buckets are broader than arbitrary block subtypes, and the mod intentionally groups them to keep progression sensible and consistent with the base game’s own design.
 
+For the full maintainer procedure—including the split-rule syntax, adding or splitting a group, generated research-block definitions, and runtime validation—see [BLOCK_RESEARCH_GROUPS.md](./BLOCK_RESEARCH_GROUPS.md).
+
 ## Regenerate script
 
 `Data/regenerate.py` is an offline helper. It scans the game content and workshop content, then writes the generated SBCs. It is not run by the game at runtime.

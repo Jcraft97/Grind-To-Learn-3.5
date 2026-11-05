@@ -41,6 +41,8 @@ Note: `SYSTEM_NAME` is a placeholder and needs to be populated with the name of 
 
 When new blocks appear after a game update, the likely fix is in `Data/SPLIT_PROGRAM.txt`, not in hand-written block-by-block exceptions. The normalization patterns are broad on purpose and are designed to map new subtypes into the expected research groups.
 
+Use [BLOCK_RESEARCH_GROUPS.md](./BLOCK_RESEARCH_GROUPS.md) for the full split-program syntax and the safe workflow for adding, splitting, merging, and validating groups. Check exact block IDs and existing normalization before editing; use `DUMP` to verify transformed keys. Remember that runtime only retains groups with public blocks and research-block definitions.
+
 Examples of prior fixes:
 
 - H2 tank variants
