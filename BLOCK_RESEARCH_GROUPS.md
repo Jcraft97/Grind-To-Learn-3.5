@@ -1,154 +1,202 @@
-# Block research groups: maintainer guide
+﻿# Block research groups: a simple maintainer guide
 
-This guide explains how to add or change block research groups in Grind to Learn. It covers the rule language, how the game definitions feed into grouping, how to check your changes, and when generated files need attention.
+This document explains how Grind to Learn decides which blocks belong to the same research group.
+
+If you need to change research grouping, the first place to look is [`Data/SPLIT_PROGRAM.txt`](./Data/SPLIT_PROGRAM.txt). Most fixes belong there, not in a one-off exception list.
 
 ## The short version
 
-1. Find the affected block's exact definition ID and check the existing normalization rules in [`Data/SPLIT_PROGRAM.txt`](./Data/SPLIT_PROGRAM.txt).
-2. Prefer adjusting a rule that groups a family of variants over listing individual blocks.
-3. Use a `MATCH` rule to normalize names and a `GROUP` rule only when a family needs an explicit group separate from the remaining normalized-name groups.
-4. Check that the block has a research-block definition in [`Data/ResearchBlocks.sbc`](./Data/ResearchBlocks.sbc) (or the relevant `Data/Mods/<workshop-id>.sbc` file).
-5. Test the runtime grouping and inspect the game log. Do not assume the offline generator is safe to run or that the game regenerates SBCs at runtime.
+1. Find the exact block ID and subtype you want to adjust.
+2. Check the existing rules in [`Data/SPLIT_PROGRAM.txt`](./Data/SPLIT_PROGRAM.txt).
+3. Prefer a family rule over a single-block exception.
+4. Confirm the block also exists in the research definition files.
+5. Test in-game and check the log before considering the change finished.
 
-## Which files do what
+## What each file is for
 
-| File | Role |
+| File | Purpose |
 |---|---|
-| [`Data/SPLIT_PROGRAM.txt`](./Data/SPLIT_PROGRAM.txt) | Source of truth for reducing block IDs to group keys and explicitly grouping selected blocks. The runtime reads this file when loading the mod. |
-| [`Data/ResearchBlocks.sbc`](./Data/ResearchBlocks.sbc) | Research-block definitions for base-game blocks. The runtime assigns their `UnlockedByGroups` membership based on the split program. |
-| [`Data/Mods/`](./Data/Mods) | Research-block definitions for supported workshop mods, stored by workshop ID. |
-| [`Data/ResearchGroups.sbc`](./Data/ResearchGroups.sbc) | Placeholder research-group definitions. Runtime code clears and repopulates their members. |
-| [`Data/UnlockersResearchGroups.sbc`](./Data/UnlockersResearchGroups.sbc) | Placeholder unlocker groups (`U0`, `U1`, etc.). Runtime code assigns their members. |
-| [`Data/Unlockers.sbc`](./Data/Unlockers.sbc) | Unlocker block definitions corresponding to those unlocker groups. |
-| [`Data/regenerate.py`](./Data/regenerate.py) | Manual, offline generator for research-block and placeholder SBC files. It is not run by the game and is known to be fragile. |
+| [`Data/SPLIT_PROGRAM.txt`](./Data/SPLIT_PROGRAM.txt) | Main source of truth. It rewrites block IDs into group keys and decides which blocks end up together. |
+| [`Data/ResearchBlocks.sbc`](./Data/ResearchBlocks.sbc) | Base-game research-block definitions. These define which blocks are researchable. |
+| [`Data/Mods/`](./Data/Mods) | Mod research-block definitions, organized by workshop ID. |
+| [`Data/ResearchGroups.sbc`](./Data/ResearchGroups.sbc) | Placeholder group definitions. The runtime clears and fills these at runtime. |
+| [`Data/UnlockersResearchGroups.sbc`](./Data/UnlockersResearchGroups.sbc) | Placeholder unlocker-to-group mappings for `U0`, `U1`, etc. |
+| [`Data/Unlockers.sbc`](./Data/Unlockers.sbc) | Unlocker block definitions tied to those groups. |
+| [`Data/regenerate.py`](./Data/regenerate.py) | Offline generator for research files. It is not part of runtime behavior and is known to be fragile. |
 
-For ordinary group changes, start with `SPLIT_PROGRAM.txt`; do not hand-edit placeholder memberships to try to implement runtime groups.
+For routine group updates, start with `SPLIT_PROGRAM.txt`.
 
 ## How grouping works
 
-At runtime, the mod collects block definition IDs, converts them to strings, and applies the split program's rules in file order. The rules progressively rewrite a key for each block. A `GROUP` command selects blocks by their current keys, removes those blocks from further rule processing, and creates a group from them. At the end, all remaining blocks with the same final key are grouped together.
+The runtime does this in order:
 
-The file begins with shorthand definitions:
+1. Collects block definition IDs.
+2. Converts them to strings.
+3. Applies the rules from `SPLIT_PROGRAM.txt` one by one.
+4. Rewrites each block's current key as it goes.
+5. Groups blocks with the same final key.
 
-```text
-DEFINE D DEFINE
-DEFINE M MATCH
-DEFINE @ GROUP
-```
+A rule can do two different things:
 
-The first line defines `D` as shorthand for `DEFINE`; the next two lines use it to define `M` as `MATCH` and `@` as `GROUP`. The first token on a line is expanded as a command name, so `M` and `@` are aliases, not separate rule types.
+- `MATCH`: normalize names but keep the block in the pool
+- `GROUP`: pick matching blocks out of the pool and assign them to an explicit group immediately
 
-The early normalization rules remove common differences such as object-builder prefixes, block types, grid sizes, and generic words. For example, `Large`/`Small` prefixes and digits are normalized before many later family-specific rules run. Always inspect the existing rules before adding another rule: a new variant may already collapse to the desired key.
+This is the core idea behind the file:
 
-### Rule language
+- normalize a family until the names line up
+- then let the remaining matching blocks become one research group
 
-Each non-empty line is a command followed by space-separated arguments. `#` starts a comment, including when it appears after a rule. Matching uses .NET regular expressions and is case-sensitive by default.
-
-| Command | Meaning |
-|---|---|
-| `DEFINE alias command` | Make the first token `alias` stand for `command`. Used in this file to define `M` and `@`. |
-| `regex=replacement ...` | Without a command, apply each regex replacement in order to every current key. Regex replacements use .NET syntax, including `$1` for capture groups. |
-| `MATCH selector regex=replacement ...` | Apply the listed replacements only to current keys matched by `selector`. Matched blocks remain in the current set and can be affected by later rules. |
-| `GROUP selector ...` | Make one explicit group from current keys matching any selector; remove those blocks from later processing. |
-| `IFMOD mod-name-regex` | Process subsequent lines only if an active mod name matches. A later `IFMOD` starts a new condition; this is not a nested conditional. `IFMOD .` matches any non-empty mod name and is used in this file as an always-true section. |
-| `IGNORE selector ...` | Remove matching blocks from subsequent grouping. |
-| `DISABLE selector ...` | Make matching blocks non-public; this is not just a grouping operation. |
-| `UNLOCK selector ...` | Mark matching blocks to be unlocked for every player. This is not just a grouping operation. |
-| `CHANCE number selector ...` | Override the spawn chance for matching blocks. |
-| `DUMP` | Write the current keys and IDs to the game log without changing them. Useful for testing. |
-
-In this file, `M` is shorthand for `MATCH`, and `@` is shorthand for `GROUP`. For example:
+Example:
 
 ```text
 M OxygenGenerator Lab=
 ```
 
-The selector `OxygenGenerator` picks the current keys containing that text, then the replacement `Lab=` removes `Lab` from those keys. The variants remain in the current set and will join blocks that end with the same normalized key.
+This rule means: if a block key contains `OxygenGenerator`, remove `Lab` from it. The block stays in the current set and may later join other blocks with the same normalized key.
 
-An explicit group looks like:
+Example of an explicit group:
 
 ```text
 @ ^ArmorCenter$ ^ArmorCorner$ ^ArmorSide$
 ```
 
-All three selectors are alternatives: matching blocks are placed into one group and removed from later processing. Anchors such as `^` and `$` are important when a selector should match a whole key. Without anchors, regex matching can find a substring.
+This creates a single group from the three matching keys and removes them from later processing.
 
-### Important syntax details
+## The rule language, in plain English
 
-- Separate tokens with **one ordinary space**. The parser splits on literal spaces; do not use repeated spaces or rely on tabs for token separation.
-- Keep each command on one line. There is no quoting or multi-line regex syntax.
-- A `#` begins a comment, so it cannot be used literally in a regex on that line.
-- A replacement token must contain exactly one `=`: the text before it is the regex and the text after it is the replacement. `=` is not a delimiter for the whole line.
+Each non-empty line is a command plus arguments. `#` starts a comment.
+
+| Command | What it does |
+|---|---|
+| `DEFINE alias command` | Creates a shorthand alias. This file defines `M` as `MATCH` and `@` as `GROUP`. |
+| `regex=replacement` | Rewrites the current key for every block. |
+| `MATCH selector regex=replacement` | Only rewrites blocks that match the selector. They remain in the current set. |
+| `GROUP selector ...` | Creates a group from matching blocks and removes them from later rules. |
+| `IFMOD mod-name-regex` | Only processes the following lines if the active mod name matches. `IFMOD .` means “match any non-empty mod name.” |
+| `IGNORE selector ...` | Removes matching blocks from later grouping. |
+| `DISABLE selector ...` | Makes matching blocks non-public. |
+| `UNLOCK selector ...` | Marks matching blocks as unlocked for all players. |
+| `CHANCE number selector ...` | Overrides spawn chance for matching blocks. |
+| `DUMP` | Writes the current keys and IDs to the log for debugging. |
+
+### Important syntax rules
+
+- Separate tokens with one ordinary space.
+- One rule = one line.
+- A replacement must contain exactly one `=`.
 - Replacements run in order, and later rules see the already-rewritten key.
-- Regexes are not implicitly anchored. Use `^...$` when the entire key must match.
-- `MATCH` does not remove its matches. `GROUP` does. Use the right operation for the intended behavior.
-- `GROUP` runs at that point in the program, not after all normalization. Put it after the key has been normalized as intended.
+- Regexes are not automatically anchored. Use `^` and `$` when you need the whole key to match.
+- `MATCH` keeps blocks in the set. `GROUP` removes them.
+- `GROUP` happens exactly where it appears in the file. Put it after the name has been normalized the way you want.
 
-## Add a block variant to an existing group
+## The easiest way to add a block variant
 
-1. **Find the ID.** Look up the block's exact type and subtype in the relevant game or mod CubeBlocks definition. Research-block entries use IDs like `Type="..."` and `Subtype="..."`.
-2. **Check coverage.** Follow the existing normalization steps in `SPLIT_PROGRAM.txt`. Use a temporary `DUMP` immediately before the relevant `GROUP` (or before the end of the program for a remainder group) to check the transformed key and ID in the game log.
-3. **Choose the narrowest useful rule.** If the new subtype differs only by a family-specific word, extend the existing `MATCH` rule for that family. If it is a new naming pattern, add a family-level normalization rule near related rules. Do not add a one-off block exception when the difference can be expressed as a reusable pattern.
-4. **Preserve boundaries.** Use anchors or a narrower selector if a short word could occur in unrelated block names. Check that removing a word does not merge unrelated families.
-5. **Verify research eligibility.** A group is retained at runtime only if it has at least one public block and at least one research-block definition (except the special reserved group 0). If the new block has no research-block definition, the runtime cannot use it to create a learnable group.
-6. **Test and review the log.** Confirm the intended IDs have the same normalized key or appear together in the intended explicit group, and confirm unrelated IDs did not join.
+When a block is in the wrong group:
 
-## Split one group into multiple groups, or merge groups
+1. Find the exact block definition ID and subtype.
+2. Review the relevant normalization rules in [`Data/SPLIT_PROGRAM.txt`](./Data/SPLIT_PROGRAM.txt).
+3. Use a temporary `DUMP` before the relevant `GROUP` to inspect the transformed key in the log.
+4. Adjust the narrowest family rule instead of creating a one-off exception.
+5. Keep selectors precise so unrelated families do not merge.
+6. Check that the block has a research-block definition.
+7. Test in-game and remove the temporary debug rule.
 
-### Split
+Good fix:
 
-First find which normalization rule is collapsing the blocks together. Then preserve the distinguishing part of their names, or add an explicit `GROUP` for the intended subset before a broader rule consumes it. Remember that an explicit `GROUP` takes matching blocks out of the remaining pipeline, so its placement changes what later rules can see.
+- “This family has a naming pattern; normalize the family word once so all variants land together.”
 
-Avoid adding an early broad `GROUP` unless you have checked all its matches. Prefer specific selectors with anchors where the subtype format allows them.
+Bad fix:
 
-### Merge
+- “Add one hardcoded rule for this exact subtype because it is the only wrong one right now.”
 
-If two families should form one remainder group, make their keys identical by applying compatible replacements before the end of the program. If one family is already consumed by a `GROUP`, revise that explicit group or its selectors as well; changing only the later normalization rules cannot affect blocks already removed from `current`.
+## If you need to split one group into multiple groups
 
-## Add a new family with its own group
+First find the rule that is collapsing the blocks together.
 
-If the variants can share a normalized key, use a `MATCH` rule to normalize their distinguishing variant words; the remaining blocks with that common key become a group automatically. Use an explicit `GROUP` when the family needs to be deliberately separated at a particular point in the rule sequence.
+If you want them separated:
+
+- keep the distinguishing part of their names, or
+- add a more specific `GROUP` before a broader rule removes them
+
+Important: once a block matches a `GROUP`, it is removed from the remaining pipeline. So placement matters.
+
+If you want to merge groups:
+
+- make the keys match before the final grouping step
+- also check any earlier explicit `GROUP` rules that could already have taken those blocks out of the set
+
+## If you are adding a new family
+
+Use a `MATCH` rule when the family can share a normalized key. Use an explicit `GROUP` only when the family needs to be separated at a specific point in the process.
 
 Before adding the rule:
 
-1. Check whether the general rules already produce the desired common key.
-2. Identify the exact selector and representative block IDs with `DUMP`.
-3. Add the family rule alongside related normalization rules, before any `GROUP` that needs the normalized key.
-4. Check that the pattern covers both grid sizes and known variants, while not swallowing similarly named unrelated blocks.
-5. Verify the resulting group using the runtime log and the unlocker/research diagnostics.
+1. Check whether the existing general rules already produce the desired common key.
+2. Identify representative IDs and inspect them with `DUMP`.
+3. Add the family rule next to related normalization rules.
+4. Confirm it covers both grid sizes and common variants.
+5. Make sure it does not catch unrelated blocks.
+6. Verify the result in the runtime log.
 
-For example, the existing rules use family-specific normalization for oxygen generators, hydrogen tanks, doors, lights, and other families. Extend the appropriate family rule rather than inserting a list of every known subtype.
+This is how existing families are usually handled: oxygen generators, hydrogen tanks, doors, lights, and similar block families are normalized by pattern, not by enumerating every subtype by hand.
 
-## Add a block that has no research-block definition yet
+## A block without a research-block definition
 
-Grouping and research eligibility are separate. The split program can see a cube-block ID, but the runtime filters out groups without research-block definitions. Check:
+Grouping and research eligibility are separate checks.
 
-- Base-game block definitions against `Data/ResearchBlocks.sbc`.
-- Supported mod definitions against the corresponding `Data/Mods/<workshop-id>.sbc`.
+A block can be seen by the split program and still be unusable for learning if it does not appear in the proper research-block file.
 
-`regenerate.py` scans the configured local Space Engineers installation and the workshop IDs hard-coded in its `modlist`. It rewrites generated files, including `ResearchBlocks.sbc`, the mod research-block files, and the placeholder group/unlocker files. It may discard or mismatch existing research state, so do not run it as a casual test or assume its output is safe. If regeneration is needed, first preserve the current files, run it intentionally in a controlled working copy with the expected game and mod content available, then review every generated diff and verify that existing research-block entries and workshop outputs were not lost. Keep the final generated files synchronized with the intended change.
+Check:
 
-Do not hand-add only an `UnlockedByGroups` value to a research-block entry to create a group: the runtime clears those values and assigns unlocker groups based on the split program.
+- base-game blocks in [`Data/ResearchBlocks.sbc`](./Data/ResearchBlocks.sbc)
+- mod blocks in the relevant `Data/Mods/<workshop-id>.sbc` file
+
+Do not hand-edit `UnlockedByGroups` on a research-block entry to create a group. The runtime clears and repopulates those memberships based on the split program.
+
+## Regeneration warnings
+
+[`Data/regenerate.py`](./Data/regenerate.py) is a manual offline generator. It is not run by the game.
+
+It can rewrite generated files, including:
+
+- [`Data/ResearchBlocks.sbc`](./Data/ResearchBlocks.sbc)
+- mod research-block files
+- placeholder research and unlocker files
+
+The generator is known to be fragile. It may drop or drift research state if used casually. Only run it intentionally, review every generated diff, and keep the generated output synchronized with the intended rule change.
 
 ## Runtime groups and group IDs
 
-The runtime builds the groups from the split program, filters groups without public/researchable blocks, and assigns the resulting groups to unlockers such as `U1`, `U2`, and so on. The placeholder files provide definitions the runtime expects; they are not a hand-maintained map of block membership. The generator currently creates 50 ordinary research-group placeholders and 250 unlocker-group placeholders. If a change materially increases the number of groups, check that the required definitions exist rather than extending only the split rules.
+The runtime builds groups from the split program, filters out groups with no public or researchable blocks, and assigns the remaining groups to unlockers such as `U1`, `U2`, and so on.
 
-Because explicit groups and remaining-key groups are accumulated in program order, a rule change can change the resulting group sequence and therefore the runtime unlocker indices. Do not assume group numbering or saved progression assignments remain stable after regrouping. Back up a test world and validate the changed behavior before using it with an existing world.
+This matters because:
+
+- group order matters
+- explicit `GROUP` placement affects later rules
+- a regrouping change can shift unlocker indexes
+- saved worlds may retain old progression assumptions
+
+If the number of groups changes significantly, check that the placeholder research definitions still exist.
 
 ## Validation checklist
 
-- [ ] Exact block type/subtype IDs were confirmed from the definition files.
-- [ ] Existing normalization and explicit group rules were checked before adding a new rule.
-- [ ] Regex selectors match only the intended family; anchors are used where appropriate.
-- [ ] `DUMP` output shows the expected transformed keys and IDs.
-- [ ] Variants intended to be together resolve to one group; intended separate variants do not.
-- [ ] Each intended group has public blocks and research-block definitions.
-- [ ] The game log has no regex/parser errors and no unexpected “blocks not included in any group” warnings.
-- [ ] Generated SBC files were changed only if needed, and all generated diffs were reviewed.
-- [ ] A test world was used to verify learn/grind behavior and the effect of any group-index changes.
-- [ ] Temporary `DUMP` rules were removed.
+Before finishing any change, confirm all of the following:
 
-## Related constraints
+- [ ] The exact block type and subtype were checked.
+- [ ] Existing normalization rules were reviewed before adding a new rule.
+- [ ] Regex selectors are specific and use anchors when needed.
+- [ ] `DUMP` output shows the expected transformed keys.
+- [ ] Intended variants end up in the same group; unrelated ones stay separate.
+- [ ] The group has at least one public block and at least one research-block definition.
+- [ ] The log has no parser or regex errors.
+- [ ] Any generated SBC files were reviewed and kept synchronized.
+- [ ] A test world was used to confirm learn/grind behavior.
+- [ ] Temporary debug `DUMP` lines were removed.
 
-Research grouping is independent from chat-command permissions and should not be made admin-only. Keep runtime progression behavior on the supported public API; do not use prohibited internal research APIs to force unlock or unlearn behavior. `/gtl unlearn` may require saving and reloading the world before build access is revoked.
+## Final rule of thumb
+
+The correct fix is usually to normalize the family name in `SPLIT_PROGRAM.txt`, not to add a special case for one block.
+
+Keep grouping rule-based, keep runtime behavior inside the supported public API, and do not make chat command access admin-only.
+
+The mod is meant to respect normal player progression. `/gtl unlearn` may require saving and reloading the world before build access is fully revoked.
