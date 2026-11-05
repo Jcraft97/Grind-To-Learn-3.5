@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<Components>
+		<Component>
+			<Id>
+				<TypeId>Component</TypeId>
+				<SubtypeId>UnlockerComponent</SubtypeId>
+			</Id>
+			<DisplayName>Unlocker component</DisplayName>
+			<Icon>Data\Textures\ring.png</Icon>
+			<Size>
+				<X>0.5</X>
+				<Y>0.5</Y>
+				<Z>0.01</Z>
+			</Size>
+			<Mass>8</Mass>
+			<Volume>2</Volume>
+			<Model>Models\Components\steel_plate_component.mwm</Model>
+			<PhysicalMaterial>Metal</PhysicalMaterial>
+			<MaxIntegrity>30</MaxIntegrity>
+			<DropProbability>0</DropProbability>
+			<Health>18</Health>
+		</Component>
+	</Components>
+</Definitions>

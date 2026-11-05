@@ -1,0 +1,207 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ResearchGroups>
+		<ResearchGroup xsi:type="ResearchGroup">
+			<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="0" />
+			<Members>
+				<BlockId Type="CubeBlock" Subtype="EngineerPlushie" />
+			</Members>
+		</ResearchGroup>
+		<ResearchGroup xsi:type="ResearchGroup">
+			<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="1" />
+			<Members />
+		</ResearchGroup>
+		<ResearchGroup xsi:type="ResearchGroup">
+			<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="2" />
+			<Members />
+		</ResearchGroup>
+		<ResearchGroup xsi:type="ResearchGroup">
+			<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="3" />
+			<Members />
+		</ResearchGroup>
+		<ResearchGroup xsi:type="ResearchGroup">
+			<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="4" />
+			<Members />
+		</ResearchGroup>
+		<ResearchGroup xsi:type="ResearchGroup">
+			<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="5" />
+			<Members />
+		</ResearchGroup>
+		<ResearchGroup xsi:type="ResearchGroup">
+			<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="6" />
+			<Members />
+		</ResearchGroup>
+		<ResearchGroup xsi:type="ResearchGroup">
+			<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="7" />
+			<Members />
+		</ResearchGroup>
+		<ResearchGroup xsi:type="ResearchGroup">
+			<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="8" />
+			<Members />
+		</ResearchGroup>
+		<ResearchGroup xsi:type="ResearchGroup">
+			<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="9" />
+			<Members />
+		</ResearchGroup>
+		<ResearchGroup xsi:type="ResearchGroup">
+			<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="10" />
+			<Members />
+		</ResearchGroup>
+		<ResearchGroup xsi:type="ResearchGroup">
+			<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="11" />
+			<Members />
+		</ResearchGroup>
+		<ResearchGroup xsi:type="ResearchGroup">
+			<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="12" />
+			<Members />
+		</ResearchGroup>
+		<ResearchGroup xsi:type="ResearchGroup">
+			<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="13" />
+			<Members />
+		</ResearchGroup>
+		<ResearchGroup xsi:type="ResearchGroup">
+			<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="14" />
+			<Members />
+		</ResearchGroup>
+		<ResearchGroup xsi:type="ResearchGroup">
+			<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="15" />
+			<Members />
+		</ResearchGroup>
+		<ResearchGroup xsi:type="ResearchGroup">
+			<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="16" />
+			<Members />
+		</ResearchGroup>
+		<ResearchGroup xsi:type="ResearchGroup">
+			<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="17" />
+			<Members />
+		</ResearchGroup>
+		<ResearchGroup xsi:type="ResearchGroup">
+			<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="18" />
+			<Members />
+		</ResearchGroup>
+		<ResearchGroup xsi:type="ResearchGroup">
+			<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="19" />
+			<Members />
+		</ResearchGroup>
+		<ResearchGroup xsi:type="ResearchGroup">
+			<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="20" />
+			<Members />
+		</ResearchGroup>
+		<ResearchGroup xsi:type="ResearchGroup">
+			<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="21" />
+			<Members />
+		</ResearchGroup>
+		<ResearchGroup xsi:type="ResearchGroup">
+			<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="22" />
+			<Members />
+		</ResearchGroup>
+		<ResearchGroup xsi:type="ResearchGroup">
+			<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="23" />
+			<Members />
+		</ResearchGroup>
+		<ResearchGroup xsi:type="ResearchGroup">
+			<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="24" />
+			<Members />
+		</ResearchGroup>
+		<ResearchGroup xsi:type="ResearchGroup">
+			<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="25" />
+			<Members />
+		</ResearchGroup>
+		<ResearchGroup xsi:type="ResearchGroup">
+			<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="26" />
+			<Members />
+		</ResearchGroup>
+		<ResearchGroup xsi:type="ResearchGroup">
+			<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="27" />
+			<Members />
+		</ResearchGroup>
+		<ResearchGroup xsi:type="ResearchGroup">
+			<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="28" />
+			<Members />
+		</ResearchGroup>
+		<ResearchGroup xsi:type="ResearchGroup">
+			<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="29" />
+			<Members />
+		</ResearchGroup>
+		<ResearchGroup xsi:type="ResearchGroup">
+			<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="30" />
+			<Members />
+		</ResearchGroup>
+		<ResearchGroup xsi:type="ResearchGroup">
+			<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="31" />
+			<Members />
+		</ResearchGroup>
+		<ResearchGroup xsi:type="ResearchGroup">
+			<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="32" />
+			<Members />
+		</ResearchGroup>
+		<ResearchGroup xsi:type="ResearchGroup">
+			<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="33" />
+			<Members />
+		</ResearchGroup>
+		<ResearchGroup xsi:type="ResearchGroup">
+			<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="34" />
+			<Members />
+		</ResearchGroup>
+		<ResearchGroup xsi:type="ResearchGroup">
+			<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="35" />
+			<Members />
+		</ResearchGroup>
+		<ResearchGroup xsi:type="ResearchGroup">
+			<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="36" />
+			<Members />
+		</ResearchGroup>
+		<ResearchGroup xsi:type="ResearchGroup">
+			<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="37" />
+			<Members />
+		</ResearchGroup>
+		<ResearchGroup xsi:type="ResearchGroup">
+			<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="38" />
+			<Members />
+		</ResearchGroup>
+		<ResearchGroup xsi:type="ResearchGroup">
+			<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="39" />
+			<Members />
+		</ResearchGroup>
+		<ResearchGroup xsi:type="ResearchGroup">
+			<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="40" />
+			<Members />
+		</ResearchGroup>
+		<ResearchGroup xsi:type="ResearchGroup">
+			<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="41" />
+			<Members />
+		</ResearchGroup>
+		<ResearchGroup xsi:type="ResearchGroup">
+			<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="42" />
+			<Members />
+		</ResearchGroup>
+		<ResearchGroup xsi:type="ResearchGroup">
+			<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="43" />
+			<Members />
+		</ResearchGroup>
+		<ResearchGroup xsi:type="ResearchGroup">
+			<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="44" />
+			<Members />
+		</ResearchGroup>
+		<ResearchGroup xsi:type="ResearchGroup">
+			<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="45" />
+			<Members />
+		</ResearchGroup>
+		<ResearchGroup xsi:type="ResearchGroup">
+			<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="46" />
+			<Members />
+		</ResearchGroup>
+		<ResearchGroup xsi:type="ResearchGroup">
+			<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="47" />
+			<Members />
+		</ResearchGroup>
+		<ResearchGroup xsi:type="ResearchGroup">
+			<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="48" />
+			<Members />
+		</ResearchGroup>
+		<ResearchGroup xsi:type="ResearchGroup">
+			<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="49" />
+			<Members />
+		</ResearchGroup>
+	</ResearchGroups>
+</Definitions>

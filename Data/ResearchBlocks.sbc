@@ -1,0 +1,2317 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ResearchBlocks>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="Assembler" Subtype="BasicAssembler" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="Assembler" Subtype="LargePrototechAssembler" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="BatteryBlock" Subtype="LargeBlockPrototechBattery" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="BatteryBlock" Subtype="SmallBlockPrototechBattery" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="ButtonPanel" Subtype="LargeBlockAccessPanel3" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CargoContainer" Subtype="LargeBlockBulkContainerA" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CargoContainer" Subtype="LargeBlockBulkContainerB" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CargoContainer" Subtype="LargeBlockBulkContainerC" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CargoContainer" Subtype="LargeBlockCargoTerminal" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CargoContainer" Subtype="LargeBlockCargoTerminalHalf" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CargoContainer" Subtype="LargeBlockLargeContainer" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CargoContainer" Subtype="LargeBlockLargeIndustrialContainer" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CargoContainer" Subtype="LargeBlockSmallContainer" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CargoContainer" Subtype="SmallBlockLargeContainer" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CargoContainer" Subtype="SmallBlockMediumContainer" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CargoContainer" Subtype="SmallBlockModularContainer" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CargoContainer" Subtype="SmallBlockSmallContainer" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="ContractBlock" Subtype="ContractBlock" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="AngledInteriorWallA" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="AngledInteriorWallB" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="ArmorCenter" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="ArmorCorner" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="ArmorInvCorner" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="ArmorSide" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="DeadAstronaut" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="DeadBody01" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="DeadBody02" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="DeadBody03" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="DeadBody04" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="DeadBody05" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="DeadBody06" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="Freight1" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="Freight1Small" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="Freight2" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="Freight2Small" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="Freight3" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="HalfArmorBlock" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="HalfSlopeArmorBlock" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="HeavyHalfArmorBlock" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="HeavyHalfSlopeArmorBlock" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeArmor2x1HalfSlopedPanelHeavyLeft" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeArmor2x1HalfSlopedPanelHeavyRight" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeArmor2x1HalfSlopedPanelLightLeft" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeArmor2x1HalfSlopedPanelLightRight" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeArmor2x1HalfSlopedTipPanelHeavyLeft" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeArmor2x1HalfSlopedTipPanelHeavyRight" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeArmor2x1HalfSlopedTipPanelLightLeft" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeArmor2x1HalfSlopedTipPanelLightRight" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeArmor2x1SlopedPanelHeavy" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeArmor2x1SlopedPanelLight" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeArmor2x1SlopedPanelTipHeavy" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeArmor2x1SlopedPanelTipLight" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeArmor2x1SlopedSideBasePanelHeavy" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeArmor2x1SlopedSideBasePanelHeavyInv" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeArmor2x1SlopedSideBasePanelLight" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeArmor2x1SlopedSideBasePanelLightInv" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeArmor2x1SlopedSideTipPanelHeavy" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeArmor2x1SlopedSideTipPanelHeavyInv" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeArmor2x1SlopedSideTipPanelLight" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeArmor2x1SlopedSideTipPanelLightInv" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeArmorCenterPanelHeavy" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeArmorCenterPanelLight" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeArmorHalfCenterPanelHeavy" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeArmorHalfCenterPanelLight" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeArmorHalfPanelHeavy" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeArmorHalfPanelLight" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeArmorHalfSlopedPanelHeavy" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeArmorHalfSlopedPanelLight" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeArmorPanelHeavy" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeArmorPanelLight" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeArmorQuarterPanelHeavy" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeArmorQuarterPanelLight" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeArmorSlopedPanelHeavy" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeArmorSlopedPanelLight" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeArmorSlopedSidePanelHeavy" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeArmorSlopedSidePanelLight" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBarrel" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBarrelStack" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBarrelThree" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockArmorBlock" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockArmorCorner" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockArmorCorner2Base" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockArmorCorner2Tip" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockArmorCornerInv" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockArmorCornerSquare" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockArmorCornerSquareInverted" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockArmorHalfCorner" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockArmorHalfSlopeCorner" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockArmorHalfSlopeCornerInverted" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockArmorHalfSlopeInverted" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockArmorHalfSlopedCorner" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockArmorHalfSlopedCornerBase" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockArmorInvCorner2Base" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockArmorInvCorner2Tip" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockArmorRaisedSlopedCorner" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockArmorRoundCorner" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockArmorRoundCornerInv" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockArmorRoundSlope" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockArmorSlope" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockArmorSlope2Base" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockArmorSlope2Tip" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockArmorSlopeTransition" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockArmorSlopeTransitionBase" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockArmorSlopeTransitionBaseMirrored" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockArmorSlopeTransitionMirrored" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockArmorSlopeTransitionTip" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockArmorSlopeTransitionTipMirrored" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockArmorSlopedCorner" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockArmorSlopedCornerBase" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockArmorSlopedCornerTip" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockArmorSquareSlopedCornerBase" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockArmorSquareSlopedCornerTip" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockArmorSquareSlopedCornerTipInv" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockCylindricalColumn" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockFloorPlanSign1" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockFloorPlanSign10" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockFloorPlanSign11" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockFloorPlanSign12" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockFloorPlanSign13" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockFloorPlanSign14" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockFloorPlanSign15" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockFloorPlanSign16" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockFloorPlanSign17" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockFloorPlanSign18" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockFloorPlanSign19" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockFloorPlanSign2" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockFloorPlanSign20" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockFloorPlanSign21" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockFloorPlanSign3" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockFloorPlanSign4" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockFloorPlanSign5" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockFloorPlanSign6" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockFloorPlanSign7" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockFloorPlanSign8" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockFloorPlanSign9" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockHeavyArmorCornerSquare" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockHeavyArmorCornerSquareInverted" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockHeavyArmorHalfCorner" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockHeavyArmorHalfSlopeCorner" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockHeavyArmorHalfSlopeCornerInverted" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockHeavyArmorHalfSlopeInverted" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockHeavyArmorHalfSlopedCorner" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockHeavyArmorHalfSlopedCornerBase" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockHeavyArmorRaisedSlopedCorner" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockHeavyArmorSlopeTransition" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockHeavyArmorSlopeTransitionBase" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockHeavyArmorSlopeTransitionBaseMirrored" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockHeavyArmorSlopeTransitionMirrored" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockHeavyArmorSlopeTransitionTip" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockHeavyArmorSlopeTransitionTipMirrored" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockHeavyArmorSlopedCorner" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockHeavyArmorSlopedCornerBase" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockHeavyArmorSlopedCornerTip" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockHeavyArmorSquareSlopedCornerBase" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockHeavyArmorSquareSlopedCornerTip" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockHeavyArmorSquareSlopedCornerTipInv" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockInsetWall" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockInsetWallCorner" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockInsetWallCornerInverted" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockInsetWallPillar" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockInsetWallSlope" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockInteriorWall" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockRoundEdge" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockRoundEdgeB" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockRoundEdgeC" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockRoundEdgeCorner" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockRoundEdgeCornerB" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockRoundEdgeCornerInv" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockRoundEdgeCornerInvB" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockRoundEdgeSlopeBase" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockRoundEdgeSlopeTip" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockRoundHalfEdge" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockRoundHalfEdgeCorner" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockRoundHalfEdgeCornerB" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockRoundHalfEdgeCornerInv" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockRoundHalfEdgeCornerInvB" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockSciFiWall" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockServerRack1" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockServerRack3" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockStatueEngineer" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockStructural_Frame" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockStructural_Platform" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockStructural_PlatformTriangle" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockStructural_SupportBeam3x3" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockStructural_SupportBeam4x4" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeBlockStructural_SupportBeam5x5" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeDeadAstronaut" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeGridBeamBlock" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeGridBeamBlockEnd" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeGridBeamBlockHalf" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeGridBeamBlockHalfSlope" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeGridBeamBlockJunction" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeGridBeamBlockRound" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeGridBeamBlockSlope" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeGridBeamBlockSlope2x1Base" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeGridBeamBlockSlope2x1Tip" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeGridBeamBlockTJunction" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeHalfArmorBlock" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeHalfSlopeArmorBlock" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeHeavyBlockArmorBlock" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeHeavyBlockArmorCorner" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeHeavyBlockArmorCorner2Base" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeHeavyBlockArmorCorner2Tip" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeHeavyBlockArmorCornerInv" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeHeavyBlockArmorInvCorner2Base" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeHeavyBlockArmorInvCorner2Tip" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeHeavyBlockArmorRoundCorner" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeHeavyBlockArmorRoundCornerInv" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeHeavyBlockArmorRoundSlope" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeHeavyBlockArmorSlope" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeHeavyBlockArmorSlope2Base" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeHeavyBlockArmorSlope2Tip" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeHeavyHalfArmorBlock" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeHeavyHalfSlopeArmorBlock" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeRailStraight" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeRoundArmorPanelCornerHeavy" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeRoundArmorPanelCornerLight" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeRoundArmorPanelFaceHeavy" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeRoundArmorPanelFaceLight" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeRoundArmorPanelHeavy" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeRoundArmorPanelInvertedCornerHeavy" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeRoundArmorPanelInvertedCornerLight" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeRoundArmorPanelLight" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeRoundArmor_Corner" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeRoundArmor_CornerInv" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeRoundArmor_Slope" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeStorageBin1" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeStorageBin2" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeStorageBin3" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeSymbol0" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeSymbol1" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeSymbol2" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeSymbol3" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeSymbol4" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeSymbol5" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeSymbol6" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeSymbol7" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeSymbol8" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeSymbol9" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeSymbolA" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeSymbolAnd" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeSymbolApostrophe" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeSymbolB" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeSymbolC" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeSymbolColon" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeSymbolD" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeSymbolDot" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeSymbolE" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeSymbolExclamationMark" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeSymbolF" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeSymbolG" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeSymbolH" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeSymbolHyphen" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeSymbolI" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeSymbolJ" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeSymbolK" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeSymbolL" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeSymbolM" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeSymbolN" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeSymbolO" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeSymbolP" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeSymbolQ" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeSymbolQuestionMark" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeSymbolR" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeSymbolS" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeSymbolT" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeSymbolU" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeSymbolUnderscore" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeSymbolV" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeSymbolW" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeSymbolX" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeSymbolY" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeSymbolZ" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeWarningSign1" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeWarningSign10" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeWarningSign11" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeWarningSign12" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeWarningSign13" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeWarningSign14" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeWarningSign15" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeWarningSign16" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeWarningSign2" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeWarningSign3" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeWarningSign4" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeWarningSign5" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeWarningSign6" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeWarningSign7" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeWarningSign8" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeWarningSign9" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeWarningSignEaster10" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeWarningSignEaster11" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeWarningSignEaster13" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeWarningSignEaster2" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeWarningSignEaster3" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="LargeWarningSignEaster9" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="PipeWorkBlockA" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="PipeWorkBlockB" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallArmor2x1HalfSlopedPanelHeavyLeft" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallArmor2x1HalfSlopedPanelHeavyRight" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallArmor2x1HalfSlopedPanelLightLeft" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallArmor2x1HalfSlopedPanelLightRight" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallArmor2x1HalfSlopedTipPanelHeavyLeft" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallArmor2x1HalfSlopedTipPanelHeavyRight" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallArmor2x1HalfSlopedTipPanelLightLeft" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallArmor2x1HalfSlopedTipPanelLightRight" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallArmor2x1SlopedPanelHeavy" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallArmor2x1SlopedPanelLight" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallArmor2x1SlopedPanelTipHeavy" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallArmor2x1SlopedPanelTipLight" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallArmor2x1SlopedSideBasePanelHeavy" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallArmor2x1SlopedSideBasePanelHeavyInv" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallArmor2x1SlopedSideBasePanelLight" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallArmor2x1SlopedSideBasePanelLightInv" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallArmor2x1SlopedSideTipPanelHeavy" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallArmor2x1SlopedSideTipPanelHeavyInv" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallArmor2x1SlopedSideTipPanelLight" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallArmor2x1SlopedSideTipPanelLightInv" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallArmorCenter" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallArmorCenterPanelHeavy" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallArmorCenterPanelLight" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallArmorCorner" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallArmorHalfCenterPanelHeavy" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallArmorHalfCenterPanelLight" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallArmorHalfPanelHeavy" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallArmorHalfPanelLight" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallArmorHalfSlopedPanelHeavy" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallArmorHalfSlopedPanelLight" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallArmorInvCorner" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallArmorPanelHeavy" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallArmorPanelLight" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallArmorQuarterPanelHeavy" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallArmorQuarterPanelLight" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallArmorSide" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallArmorSlopedPanelHeavy" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallArmorSlopedPanelLight" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallArmorSlopedSidePanelHeavy" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallArmorSlopedSidePanelLight" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallBarrel" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallBlockArmorBlock" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallBlockArmorCorner" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallBlockArmorCorner2Base" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallBlockArmorCorner2Tip" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallBlockArmorCornerInv" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallBlockArmorCornerSquare" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallBlockArmorCornerSquareInverted" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallBlockArmorHalfCorner" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallBlockArmorHalfSlopeCorner" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallBlockArmorHalfSlopeCornerInverted" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallBlockArmorHalfSlopeInverted" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallBlockArmorHalfSlopedCorner" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallBlockArmorHalfSlopedCornerBase" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallBlockArmorInvCorner2Base" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallBlockArmorInvCorner2Tip" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallBlockArmorRaisedSlopedCorner" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallBlockArmorRoundCorner" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallBlockArmorRoundCornerInv" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallBlockArmorRoundSlope" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallBlockArmorSlope" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallBlockArmorSlope2Base" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallBlockArmorSlope2Tip" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallBlockArmorSlopeTransition" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallBlockArmorSlopeTransitionBase" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallBlockArmorSlopeTransitionBaseMirrored" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallBlockArmorSlopeTransitionMirrored" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallBlockArmorSlopeTransitionTip" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallBlockArmorSlopeTransitionTipMirrored" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallBlockArmorSlopedCorner" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallBlockArmorSlopedCornerBase" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallBlockArmorSlopedCornerTip" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallBlockArmorSquareSlopedCornerBase" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallBlockArmorSquareSlopedCornerTip" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallBlockArmorSquareSlopedCornerTipInv" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallBlockCylindricalColumn" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallBlockHeavyArmorCornerSquare" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallBlockHeavyArmorCornerSquareInverted" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallBlockHeavyArmorHalfCorner" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallBlockHeavyArmorHalfSlopeCorner" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallBlockHeavyArmorHalfSlopeCornerInverted" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallBlockHeavyArmorHalfSlopeInverted" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallBlockHeavyArmorHalfSlopedCorner" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallBlockHeavyArmorHalfSlopedCornerBase" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallBlockHeavyArmorRaisedSlopedCorner" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallBlockHeavyArmorSlopeTransition" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallBlockHeavyArmorSlopeTransitionBase" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallBlockHeavyArmorSlopeTransitionBaseMirrored" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallBlockHeavyArmorSlopeTransitionMirrored" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallBlockHeavyArmorSlopeTransitionTip" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallBlockHeavyArmorSlopeTransitionTipMirrored" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallBlockHeavyArmorSlopedCorner" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallBlockHeavyArmorSlopedCornerBase" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallBlockHeavyArmorSlopedCornerTip" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallBlockHeavyArmorSquareSlopedCornerBase" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallBlockHeavyArmorSquareSlopedCornerTip" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallBlockHeavyArmorSquareSlopedCornerTipInv" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallBlockRoundEdge" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallBlockRoundEdgeCorner" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallBlockRoundEdgeCornerB" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallBlockRoundEdgeCornerInv" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallBlockRoundEdgeCornerInvB" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallBlockRoundEdgeSlopeBase" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallBlockRoundEdgeSlopeTip" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallBlockRoundHalfEdge" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallBlockRoundHalfEdgeCorner" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallBlockRoundHalfEdgeCornerB" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallBlockRoundHalfEdgeCornerInv" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallBlockRoundHalfEdgeCornerInvB" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallGridBeamBlock" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallGridBeamBlockEnd" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallGridBeamBlockHalf" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallGridBeamBlockHalfSlope" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallGridBeamBlockJunction" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallGridBeamBlockRound" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallGridBeamBlockSlope" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallGridBeamBlockSlope2x1Base" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallGridBeamBlockSlope2x1Tip" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallGridBeamBlockTJunction" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallHeavyBlockArmorBlock" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallHeavyBlockArmorCorner" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallHeavyBlockArmorCorner2Base" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallHeavyBlockArmorCorner2Tip" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallHeavyBlockArmorCornerInv" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallHeavyBlockArmorInvCorner2Base" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallHeavyBlockArmorInvCorner2Tip" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallHeavyBlockArmorRoundCorner" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallHeavyBlockArmorRoundCornerInv" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallHeavyBlockArmorRoundSlope" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallHeavyBlockArmorSlope" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallHeavyBlockArmorSlope2Base" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallHeavyBlockArmorSlope2Tip" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallRoundArmorPanelCornerHeavy" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallRoundArmorPanelCornerLight" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallRoundArmorPanelFaceHeavy" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallRoundArmorPanelFaceLight" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallRoundArmorPanelHeavy" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallRoundArmorPanelInvertedCornerHeavy" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallRoundArmorPanelInvertedCornerLight" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallRoundArmorPanelLight" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallStorageBin1" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallSymbol0" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallSymbol1" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallSymbol2" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallSymbol3" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallSymbol4" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallSymbol5" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallSymbol6" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallSymbol7" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallSymbol8" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallSymbol9" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallSymbolA" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallSymbolAnd" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallSymbolApostrophe" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallSymbolB" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallSymbolC" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallSymbolColon" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallSymbolD" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallSymbolDot" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallSymbolE" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallSymbolExclamationMark" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallSymbolF" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallSymbolG" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallSymbolH" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallSymbolHyphen" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallSymbolI" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallSymbolJ" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallSymbolK" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallSymbolL" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallSymbolM" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallSymbolN" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallSymbolO" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallSymbolP" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallSymbolQ" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallSymbolQuestionMark" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallSymbolR" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallSymbolS" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallSymbolT" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallSymbolU" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallSymbolUnderscore" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallSymbolV" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallSymbolW" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallSymbolX" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallSymbolY" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallSymbolZ" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallWarningSign1" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallWarningSign10" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallWarningSign11" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallWarningSign12" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallWarningSign13" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallWarningSign14" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallWarningSign15" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallWarningSign16" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallWarningSign2" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallWarningSign3" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallWarningSign4" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallWarningSign5" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallWarningSign6" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallWarningSign7" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallWarningSign8" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallWarningSign9" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallWarningSignEaster10" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallWarningSignEaster11" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallWarningSignEaster13" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallWarningSignEaster2" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallWarningSignEaster3" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="SmallWarningSignEaster9" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="StorageShelf1" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="StorageShelf2" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="StorageShelf3" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="Truss" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="TrussAngled" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="TrussAngledSmall" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="TrussFrame" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="TrussHalf" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="TrussHalfSmall" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="TrussSloped" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="TrussSlopedFrame" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="TrussSlopedSmall" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="CubeBlock" Subtype="TrussSmall" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="Drill" Subtype="LargeBlockPrototechDrill" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="FunctionalBlock" Subtype="LargeBlockAlgaeFarm" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="FunctionalBlock" Subtype="LargeBlockAlgaeFarmReskin" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="FunctionalBlock" Subtype="ServicesTerminal" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="Gyro" Subtype="LargeBlockPrototechGyro" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="Gyro" Subtype="SmallBlockPrototechGyro" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="HydrogenEngine" Subtype="LargePrototechReactor" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="JumpDrive" Subtype="LargePrototechJumpDrive" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="JumpDrive" Subtype="SmallPrototechJumpDrive" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="LandingGear" Subtype="LargeBlockLandingGear" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="LandingGear" Subtype="LargeBlockLandingGearReskin" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="LandingGear" Subtype="LargeBlockMagneticPlate" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="LandingGear" Subtype="LargeBlockSmallMagneticPlate" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="LandingGear" Subtype="SmallBlockLandingGear" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="LandingGear" Subtype="SmallBlockLandingGearReskin" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="LandingGear" Subtype="SmallBlockMagneticPlate" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="LandingGear" Subtype="SmallBlockSmallMagneticPlate" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="OxygenFarm" Subtype="LargeBlockOxygenFarm" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="OxygenFarm" Subtype="LargeBlockOxygenFarmReskin" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="OxygenGenerator" Subtype="" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="OxygenGenerator" Subtype="LargeBlockOxygenGeneratorLab" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="OxygenGenerator" Subtype="OxygenGeneratorSmall" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="OxygenGenerator" Subtype="SmallBlockOxygenGeneratorLab" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="Refinery" Subtype="Blast Furnace" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="Refinery" Subtype="LargePrototechRefinery" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="Refinery" Subtype="SmallPrototechRefinery" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="SmallMissileLauncher" Subtype="LargeFlareLauncher" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="SmallMissileLauncher" Subtype="SmallFlareLauncher" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="SolarPanel" Subtype="LargeBlockColorableSolarPanel" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="SolarPanel" Subtype="LargeBlockColorableSolarPanelCorner" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="SolarPanel" Subtype="LargeBlockColorableSolarPanelCornerInverted" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="SolarPanel" Subtype="LargeBlockSolarPanel" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="SolarPanel" Subtype="SmallBlockColorableSolarPanel" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="SolarPanel" Subtype="SmallBlockColorableSolarPanelCorner" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="SolarPanel" Subtype="SmallBlockColorableSolarPanelCornerInverted" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="SolarPanel" Subtype="SmallBlockSolarPanel" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="StoreBlock" Subtype="AtmBlock" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="StoreBlock" Subtype="StoreBlock" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="SurvivalKit" Subtype="SurvivalKit" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="SurvivalKit" Subtype="SurvivalKitLarge" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="SurvivalKit" Subtype="SurvivalKitLargeReskin" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="SurvivalKit" Subtype="SurvivalKitSmallReskin" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="TerminalBlock" Subtype="LargeBlockAccessPanel1" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="TerminalBlock" Subtype="LargeBlockAccessPanel2" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="TerminalBlock" Subtype="LargeBlockAccessPanel4" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="TerminalBlock" Subtype="LargeBlockServerRack2" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="TerminalBlock" Subtype="LargeCrate" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="TerminalBlock" Subtype="SmallBlockAccessPanel1" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="TerminalBlock" Subtype="SmallBlockAccessPanel2" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="TerminalBlock" Subtype="SmallBlockAccessPanel3" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="TerminalBlock" Subtype="SmallBlockAccessPanel4" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="Thrust" Subtype="LargeBlockPrototechThruster" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="Thrust" Subtype="SmallBlockPrototechThruster" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="VendingMachine" Subtype="VendingMachine" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="Wheel" Subtype="OffroadRealWheel2x2" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="Wheel" Subtype="RealWheel2x2" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="Wheel" Subtype="RealWheel2x2Mirrored" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="Wheel" Subtype="SmallRealWheel2x2" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="Wheel" Subtype="SmallRealWheel2x2Mirrored" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="WindTurbine" Subtype="LargeBlockWindTurbine" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="WindTurbine" Subtype="LargeBlockWindTurbineReskin" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+	</ResearchBlocks>
+</Definitions>

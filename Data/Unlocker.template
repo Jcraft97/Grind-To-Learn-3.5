@@ -1,0 +1,34 @@
+﻿<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition>
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>Unlocker{0}</SubtypeId>
+			</Id>
+			<DisplayName>Unlocker</DisplayName>
+			<Icon>Data\Textures\plus.png</Icon>
+			<Public>true</Public>
+			<Description>Unlocker {0}</Description>
+			<BlockPairName>Unlocker{0}</BlockPairName>
+			<CubeSize>Large</CubeSize>
+			<GuiVisible>false</GuiVisible>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="1" />
+			<ModelOffset x="0" y="0" z="0" />
+			<Model>Models\Cubes\Large\SpaceBallBlock.mwm</Model>
+			<Components>
+				<Component Subtype="UnlockerComponent" Count="1" />
+			</Components>
+			<CriticalComponent Subtype="UnlockerComponent" Index="0" />
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.50" File="Models\Cubes\Large\SpaceBallBlockConstruction_1.mwm" />
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\SpaceBallBlockConstruction_2.mwm" />
+			</BuildProgressModels>
+			<EdgeType>Light</EdgeType>
+			<BuildTimeSeconds>10</BuildTimeSeconds>
+			<PCU>1</PCU>
+			<IsAirTight>false</IsAirTight>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

@@ -1,0 +1,131 @@
+DEFINE D DEFINE
+D M MATCH
+D @ GROUP
+
+[_\s]= # useless chars
+MyObjectBuilder=
+^(.+)/\(null\)$=$1 # convert type/(null) to /type
+(.*)/= # removing block type
+\dx\dx\d= \dx\d= x\d+= \d+= # removing digits
+
+M Cockpit ^(LargeBlockCockpitSeat|SmallBlockCockpit|DBSmallBlockFighterCockpit|SmallBlockCapCockpit)$=Cockpit
+M Cockpit ^(Large|Small)BlockCockpitIndustrial$=Cockpit
+M Cockpit ^(Large|Small)BlockOpenSlopedCockpit$=Cockpit
+M Cockpit ^(Large|Small)BlockClosedSlopedCockpit$=Cockpit
+SmallBlockFlushCockpit=Cockpit
+
+Large= Small=
+DISABLE Prototech
+
+# Normalize cockpit variants into one research group
+M Cockpit Speeder= Open= Standing= Rover= Buggy= Compact=
+SuspendedControlSeat(|B)$=Cockpit
+
+IGNORE Plushie$
+DISABLE Dead(Astronaut|Body)
+
+IFMOD Eat..Drink..Sleep
+UNLOCK EmergencyFoodproduction
+
+IFMOD Exploration.Enhancement.Mod
+^EEMPilotedFighterCockpit=Cockpit
+^EEMPiloted.*=Cockpit
+^EEMHiddenAntenna$=Antenna
+
+IFMOD Energy.Shields
+Shield(Capacitor|FluxCoil)=shield_mods
+M ShieldGenerator Micro=
+
+IFMOD . # always true
+
+@ ^ArmorCenter$ ^ArmorCorner$ ^ArmorInvCorner$ ^ArmorSide$ # Blast doors
+
+# buzz words
+Block= Half= Short= Medium= Inverted= Angled= Left= Right= Colorable= Corner= Center= Offset= Modular= [Mm]irrored= Cylindrical=
+
+# synonyms
+Rocket=Missile
+Jukebox=Sound
+MagneticPlate=LandingGear
+Thruster=Thrust
+RefillStation=MedicalRoom # that's correct?
+
+M Truss Sloped= Floor= Ladder= Frame= T$= X$=
+M Neon Bend= Up= Down= End= Straight= (T|U)$= Circle=
+
+M Armor Sloped= Slope= Raised= Round= Transition= Quarter= Base= Tip= Side= Inv= Square= Face=
+^RoundEdge.*=Armor
+ArmorPanelLight=ArmorPanel
+
+M Wheel Offroad= Real= ^Wheel$=WHEELS
+M Suspension Offroad= ^Suspension$=WHEELS
+
+# interior blocks
+M Wall Interior= Cover= Passage= (A|B)$= 
+M Passage Light=
+M Duct Light=
+M AtmosphericThrust Flat= DShape=
+
+Industrial= SciFi= Warfare= Reskin=
+
+M HangarDoor Airtight= [A-C]$=
+^Gate$=HangarDoor # same thing
+
+M Door Sliding= Slide= Side= Hatch= Narrow= EvenWide= Lab= Inv$= Glass= Centred= [ABC]$=
+M Conveyor Converter= Hub= Pipe= Junction= Flange= Sorter= Duct= Tube= Seamless= End= Cap= Curved= Intersection= Frame= Ship= T$=
+M CableRun (Style|Long)=
+M Rotor Advanced= # split?
+M Piston Top= Base=
+M Light (Offset|Panel|corner|Rotating|Front|AirDuct|Troffer|Inv|Round|Square)=
+Floodlight.*=Light
+M GridBeam Slope= Round= Base= Tip= End= T?Junction=
+M Barrel Three= Stack= Explosive=
+M Module Productivity= Effectiveness= Energy=
+M Parachute ^Lg= ^Sm=
+M PassengerSeat New=
+M Hinge Head=
+M Camera TopMounted=
+M Cryo Chamber= Room= LabVat=
+M Merge Ship=
+M HydrogenTank Lab= Bulk=
+M OxygenTank Lab=
+M OxygenGenerator Lab=
+^CargoTerminal$=Container
+
+# safe things
+@ Bridge
+M Passage Window= # not window block
+@ Window
+@ Symbol WarningSign FloorPlanSign
+@ Catwalk Railing GratedStairs ^Ladder$ GridBeam
+@ LCD TextPanel ^Billboard(Round|)
+@ ^AirVent ExhaustPipe ExhaustCap HeatVent
+@ Inset
+@ ^Console$ ^ConsoleModule TargetDummy StatueEngineer ^Desk Kitchen ^Bed Bed$ Bench PassengerSeat LockerRoom Planters Couch Toilet FoodDispenser LabEquipment Shower Bathroom MedicalStation FirstAidCabinet WeaponRack BarCounter ^FlareLauncher$ Plushie CaptainDesk ^Conduit ^Lab(Desk|Sink|Cabinet) ^Freezer$ Vivarium
+M Floor Edge= Decal=
+@ Passage Stairs Ramp Pillar FireCover Embrasure Viewport LadderShaft Column ^AirDuct PipeWork. Wall Corridor Floor ^Pipes ^ServerRack$ ^CableRun$
+@ ^(AlgaeFarm|FarmPlot|FoodProcessor|IrrigationSystem)$
+
+@ ^Structural(Frame|Support|Platform).*$
+
+M GravityGenerator Sphere=
+^(VirtualMass|GravityGenerator|SpaceBall)$=GRAVITY
+^(ShipGrinder|ShipWelder)$=CONSTRUCTION
+
+M Antenna Dish= Radio= Compact=
+(Beacon|BroadcastController|Transponder)=Antenna
+
+M ButtonPanel Pedestal= Vertical=
+M ControlPanel Pedestal=
+^(ControlPanel|ButtonPanel|ButtonTerminal|Terminal|AccessPanel)$=BUTTONS
+^(Lockers|Freight|Crate|StorageShelf|StorageBin)$=SMALL_CONTAINERS
+^(Spotlight|Searchlight)$=Light
+^(Store|SafeZone|Contract|VendingMachine|Atm|ServicesTerminal)$=ECONOMY
+^(AdvancedStator|Stator|Rotor)$=MOTORS
+^(TurretControl|EventController|EmotionController|PathRecorder|BasicMission|FlightMovement|OffensiveCombat|DefensiveCombat|RemoteControl)$=AI_BLOCKS
+M BulkContainer ^Bulk= [ABC]$=
+
+# DUMP # prints curent block list to log
+# DISABLE WHEELS ECONOMY # example
+# UNLOCK WindTurbine Battery # example
+# CHANCE 5 WindTurbine Battery # example
