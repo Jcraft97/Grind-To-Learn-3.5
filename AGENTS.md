@@ -14,6 +14,27 @@ Keep the mod aligned with the base game’s progression model, maintain correct 
 - The mod uses the public Space Engineers progression API; do not reach through prohibited internal APIs.
 - The mod is meant to be private and player-owned, not server-admin-only.
 
+## The game files that we are overriding:
+
+`C:\Program Files (x86)\Steam\steamapps\common\SpaceEngineers\Content\Data`
+
+## Game modding docs
+
+Official docs to reference can be found here:
+
+- `https://www.spaceengineersgame.com/modding-guides/`
+
+Other docs can be found here:
+
+- `https://spaceengineers.wiki.gg/wiki/Modding`
+
+
+## Log files
+
+Ingame debug log files can be found here: `C:\Users\SYSTEM_NAME\AppData\Roaming\SpaceEngineers`
+
+Note: `SYSTEM_NAME` is a placeholder and needs to be populated with the name of the users system.
+
 ## Core rules
 
 ### 1. Keep grouping rule-based
@@ -45,9 +66,11 @@ The Space Engineers modding environment rejects direct access to `MySessionCompo
 
 Do not gate behavior behind admin-only checks. The mod should operate on the current player’s own progression state. The chat commands should not require server admin rights.
 
-### 5. Treat forget behavior as a compatibility constraint
+### 5. Treat unlearn behavior as a compatibility constraint
 
-The “forget” action may be limited by the game’s progression cache or other public API semantics. The correct approach is to use the supported API and keep the behavior aligned with normal game progression, not to force prohibited internals.
+The “unlearn” action may be limited by the game’s progression cache or other public API semantics. The correct approach is to use the supported API and keep the behavior aligned with normal game progression, not to force prohibited internals.
+
+For compatibility, `/gtl forget` may remain accepted as an alias, but the canonical command is `/gtl unlearn`.
 
 ## Files you may need to touch
 

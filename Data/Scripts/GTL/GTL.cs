@@ -911,6 +911,7 @@ namespace GrindToLearn3
 					continue;
 				}
 
+				MyDefinitionId researchGroupId = new MyDefinitionId(typeof(MyObjectBuilder_ResearchGroupDefinition), unlockerGroup);
 				research.firstBlock = groups[i][0];
 
 				foreach (var block in groups[i])
@@ -923,7 +924,7 @@ namespace GrindToLearn3
 					}
 
 					def.UnlockedByGroups = new string[] { unlockerGroup };
-					unlockers[block] = unlocker.Id;
+					unlockers[block] = researchGroupId;
 					
 					if(unlockThis.Contains(block)) research.unlockOnPlayerConnected = true;
 
@@ -973,15 +974,15 @@ namespace GrindToLearn3
 		{
 			Log("MyResearchUnlock " + blockId + " " + playerId);
 
-			MyDefinitionId unlockerId;
-			if (!unlockers.TryGetValue(blockId, out unlockerId))
+			MyDefinitionId researchGroupId;
+			if (!unlockers.TryGetValue(blockId, out researchGroupId))
 			{
-				Log("ERROR: Unlocker not found for " + blockId);
+				Log("ERROR: Research group not found for " + blockId);
 				return false;
 			}
 
-			Log("UnlockWithUnlocker playerId=" + playerId + " unlockerId=" + unlockerId);
-			MyVisualScriptLogicProvider.PlayerResearchUnlock(playerId, unlockerId);
+			Log("UnlockResearchGroup playerId=" + playerId + " researchGroupId=" + researchGroupId);
+			MyVisualScriptLogicProvider.PlayerResearchUnlock(playerId, researchGroupId);
 
 			return true;
 		}
@@ -1044,16 +1045,17 @@ namespace GrindToLearn3
 			if(action.Equals("help", StringComparison.OrdinalIgnoreCase) ||
 				string.IsNullOrEmpty(action))
 			{
-				RespondToPlayer(player.IdentityId, "GTL: /gtl learn <block> or /gtl forget <block>. Use subtype or Type/Subtype; this changes the block's whole research group.");
+				RespondToPlayer(player.IdentityId, "GTL: /gtl learn <block> or /gtl unlearn <block>. Use subtype or Type/Subtype; this changes the block's whole research group.");
 				return;
 			}
 
 			bool learn = action.Equals("learn", StringComparison.OrdinalIgnoreCase) ||
 				action.Equals("unlock", StringComparison.OrdinalIgnoreCase);
-			bool forget = action.Equals("forget", StringComparison.OrdinalIgnoreCase) ||
+			bool unlearn = action.Equals("unlearn", StringComparison.OrdinalIgnoreCase) ||
+				action.Equals("forget", StringComparison.OrdinalIgnoreCase) ||
 				action.Equals("lock", StringComparison.OrdinalIgnoreCase);
 
-			if(!learn && !forget)
+			if(!learn && !unlearn)
 			{
 				RespondToPlayer(player.IdentityId, "Unknown GTL command. Use /gtl help.");
 				return;
@@ -1098,22 +1100,22 @@ namespace GrindToLearn3
 				return;
 			}
 
-			MyDefinitionId unlocker;
-			if(!unlockers.TryGetValue(matches[0], out unlocker))
+			MyDefinitionId researchGroupId;
+			if(!unlockers.TryGetValue(matches[0], out researchGroupId))
 			{
-				RespondToPlayer(player.IdentityId, "No progression unlocker is registered for that block.");
+				RespondToPlayer(player.IdentityId, "No progression research group is registered for that block.");
 				return;
 			}
 
 			if(learn)
 			{
-				MyVisualScriptLogicProvider.PlayerResearchUnlock(player.IdentityId, unlocker);
-				RespondToPlayer(player.IdentityId, "Unlock request sent for " + matches[0].ToString() + ".");
+				MyResearchUnlock(matches[0], player.IdentityId);
+				RespondToPlayer(player.IdentityId, "Learn request sent for " + matches[0].ToString() + ".");
 			}
 			else
 			{
-				MyVisualScriptLogicProvider.PlayerResearchLock(player.IdentityId, unlocker);
-				RespondToPlayer(player.IdentityId, "Progression lock request sent for " + matches[0].ToString() + ". Space Engineers may retain build access until progression is reset.");
+				MyVisualScriptLogicProvider.PlayerResearchLock(player.IdentityId, researchGroupId);
+				RespondToPlayer(player.IdentityId, "Unlearn request sent for " + matches[0].ToString() + ". Space Engineers may retain build access until progression is reset.");
 			}
 		}
 

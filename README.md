@@ -68,7 +68,9 @@ The mod includes in-game chat commands for toggling the player’s research stat
 Available behavior is based on the public research API and player identity:
 
 - `/gtl learn <group-or-block>`
-- `/gtl forget <group-or-block>`
+- `/gtl unlearn <group-or-block>`
+
+The old `/gtl forget` name is still accepted as a compatibility alias, but the canonical command is `/gtl unlearn`.
 
 These commands are not meant to be privileged. The mod is private and should operate on the current player’s research state rather than a server-admin override path.
 
