@@ -911,7 +911,6 @@ namespace GrindToLearn3
 					continue;
 				}
 
-				MyDefinitionId researchGroupId = new MyDefinitionId(typeof(MyObjectBuilder_ResearchGroupDefinition), unlockerGroup);
 				research.firstBlock = groups[i][0];
 
 				foreach (var block in groups[i])
@@ -924,7 +923,7 @@ namespace GrindToLearn3
 					}
 
 					def.UnlockedByGroups = new string[] { unlockerGroup };
-					unlockers[block] = researchGroupId;
+					unlockers[block] = unlocker.Id;
 					
 					if(unlockThis.Contains(block)) research.unlockOnPlayerConnected = true;
 
@@ -974,15 +973,15 @@ namespace GrindToLearn3
 		{
 			Log("MyResearchUnlock " + blockId + " " + playerId);
 
-			MyDefinitionId researchGroupId;
-			if (!unlockers.TryGetValue(blockId, out researchGroupId))
+			MyDefinitionId unlockerId;
+			if (!unlockers.TryGetValue(blockId, out unlockerId))
 			{
-				Log("ERROR: Research group not found for " + blockId);
+				Log("ERROR: Unlocker not found for " + blockId);
 				return false;
 			}
 
-			Log("UnlockResearchGroup playerId=" + playerId + " researchGroupId=" + researchGroupId);
-			MyVisualScriptLogicProvider.PlayerResearchUnlock(playerId, researchGroupId);
+			Log("UnlockWithUnlocker playerId=" + playerId + " unlockerId=" + unlockerId);
+			MyVisualScriptLogicProvider.PlayerResearchUnlock(playerId, unlockerId);
 
 			return true;
 		}
@@ -1100,10 +1099,10 @@ namespace GrindToLearn3
 				return;
 			}
 
-			MyDefinitionId researchGroupId;
-			if(!unlockers.TryGetValue(matches[0], out researchGroupId))
+			MyDefinitionId unlocker;
+			if(!unlockers.TryGetValue(matches[0], out unlocker))
 			{
-				RespondToPlayer(player.IdentityId, "No progression research group is registered for that block.");
+				RespondToPlayer(player.IdentityId, "No progression unlocker is registered for that block.");
 				return;
 			}
 
@@ -1114,7 +1113,7 @@ namespace GrindToLearn3
 			}
 			else
 			{
-				MyVisualScriptLogicProvider.PlayerResearchLock(player.IdentityId, researchGroupId);
+				MyVisualScriptLogicProvider.PlayerResearchLock(player.IdentityId, unlocker);
 				RespondToPlayer(player.IdentityId, "Unlearn request sent for " + matches[0].ToString() + ". Space Engineers may retain build access until progression is reset.");
 			}
 		}
