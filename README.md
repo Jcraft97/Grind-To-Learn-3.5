@@ -1,4 +1,4 @@
-# Grind to Learn
+# Grind to Learn 3.5
 
 Grind to Learn is a private Space Engineers mod that turns the base game’s research system into a grind-to-learn progression model. This means that the only way for the player to "learn" new blocks to build is by grinding down a existing block in the world.
 
