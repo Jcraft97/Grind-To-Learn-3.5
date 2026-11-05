@@ -2154,6 +2154,10 @@
 			<UnlockedByGroups />
 		</ResearchBlock>
 		<ResearchBlock xsi:type="ResearchBlock">
+			<Id Type="OxygenGenerator" Subtype="LargeBlockPrototechOxygenGenerator" />
+			<UnlockedByGroups />
+		</ResearchBlock>
+		<ResearchBlock xsi:type="ResearchBlock">
 			<Id Type="OxygenGenerator" Subtype="OxygenGeneratorSmall" />
 			<UnlockedByGroups />
 		</ResearchBlock>

@@ -48,14 +48,15 @@ Rocket=Missile
 Jukebox=Sound
 MagneticPlate=LandingGear
 Thruster=Thrust
-RefillStation=MedicalRoom # that's correct?
+
 
 M Truss Sloped= Floor= Ladder= Frame= T$= X$=
 M Neon Bend= Up= Down= End= Straight= (T|U)$= Circle=
+M Conduit Bend= Up= Down= End= Straight= Damaged= Junction= Light= Inv= Transition= Boxes=
 
 M Armor Sloped= Slope= Raised= Round= Transition= Quarter= Base= Tip= Side= Inv= Square= Face=
-^RoundEdge.*=Armor
 ArmorPanelLight=ArmorPanel
+@ RoundEdge Inv= Base= Tip=
 
 M Wheel Offroad= Real= ^Wheel$=WHEELS
 M Suspension Offroad= ^Suspension$=WHEELS
@@ -76,9 +77,9 @@ M Conveyor Converter= Hub= Pipe= Junction= Flange= Sorter= Duct= Tube= Seamless=
 M CableRun (Style|Long)=
 M Rotor Advanced= # split?
 M Piston Top= Base=
-M Light (Offset|Panel|corner|Rotating|Front|AirDuct|Troffer|Inv|Round|Square)=
+M Light (Offset|Panel|corner|Rotating|Front|AirDuct|Troffer|Inv|Round|Square|Inset)=
 Floodlight.*=Light
-M GridBeam Slope= Round= Base= Tip= End= T?Junction=
+@ GridBeam Slope= Round= Base= Tip= End= T?Junction=
 M Barrel Three= Stack= Explosive=
 M Module Productivity= Effectiveness= Energy=
 M Parachute ^Lg= ^Sm=
@@ -90,6 +91,9 @@ M Merge Ship=
 M HydrogenTank Lab= Bulk=
 M OxygenTank Lab=
 M OxygenGenerator Lab=
+M Connector Inset=
+M Collector Flat=
+M RefillStation Inset=
 ^CargoTerminal$=Container
 
 # safe things
@@ -97,11 +101,10 @@ M OxygenGenerator Lab=
 M Passage Window= # not window block
 @ Window
 @ Symbol WarningSign FloorPlanSign
-@ Catwalk Railing GratedStairs ^Ladder$ GridBeam
+@ Catwalk Railing GratedStairs ^Ladder$ 
 @ LCD TextPanel ^Billboard(Round|)
 @ ^AirVent ExhaustPipe ExhaustCap HeatVent
-@ Inset
-@ ^Console$ ^ConsoleModule TargetDummy StatueEngineer ^Desk Kitchen ^Bed Bed$ Bench PassengerSeat LockerRoom Planters Couch Toilet FoodDispenser LabEquipment Shower Bathroom MedicalStation FirstAidCabinet WeaponRack BarCounter ^FlareLauncher$ Plushie CaptainDesk ^Conduit ^Lab(Desk|Sink|Cabinet) ^Freezer$ Vivarium
+@ ^Console$ ^ConsoleModule TargetDummy StatueEngineer ^Desk Kitchen ^Bed Bed$ Bench PassengerSeat LockerRoom Planters Couch Toilet FoodDispenser LabEquipment Shower Bathroom MedicalStation FirstAidCabinet WeaponRack BarCounter ^FlareLauncher$ Plushie CaptainDesk ^Lab(Desk|Sink|Cabinet) ^Freezer$ Vivarium ^Inset(Terra|Aqua|Planter)
 M Floor Edge= Decal=
 @ Passage Stairs Ramp Pillar FireCover Embrasure Viewport LadderShaft Column ^AirDuct PipeWork. Wall Corridor Floor ^Pipes ^ServerRack$ ^CableRun$
 @ ^(AlgaeFarm|FarmPlot|FoodProcessor|IrrigationSystem)$
@@ -122,8 +125,9 @@ M ControlPanel Pedestal=
 ^(Spotlight|Searchlight)$=Light
 ^(Store|SafeZone|Contract|VendingMachine|Atm|ServicesTerminal)$=ECONOMY
 ^(AdvancedStator|Stator|Rotor)$=MOTORS
-^(TurretControl|EventController|EmotionController|PathRecorder|BasicMission|FlightMovement|OffensiveCombat|DefensiveCombat|RemoteControl)$=AI_BLOCKS
+^(TurretControl|EmotionController|PathRecorder|BasicMission|FlightMovement|OffensiveCombat|DefensiveCombat|RemoteControl)$=AI_BLOCKS
 M BulkContainer ^Bulk= [ABC]$=
+@ ^Timer$ ^EventController$
 
 # DUMP # prints curent block list to log
 # DISABLE WHEELS ECONOMY # example
