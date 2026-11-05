@@ -1,8 +1,10 @@
-# Grind to Learn
+# Grind to Learn 3.5
 
-Grind to Learn is a private Space Engineers mod that turns the base game’s research system into a grind-to-learn progression model. This means that the only way for the player to "learn" new blocks to build is by grinding down a existing block in the world.
+This is a fork of this mod from SE `https://steamcommunity.com/sharedfiles/filedetails/?id=3207654953`. 
 
-This mod is intentionally private and player-centric. It follows the normal player progression flow and uses the player’s own identity and research state.
+Grind to Learn is a Space Engineers mod that turns the base game’s research system into a grind-to-learn progression model. This means that the only way for the player to "learn" new blocks to build is by grinding down a existing block in the world.
+
+This mod is player-centric. It follows the normal player progression flow and uses the player’s own identity and research state.
 
 ## What this mod does
 
@@ -89,11 +91,10 @@ When Space Engineers updates and adds new content:
 ## Compatibility notes
 
 - Do not rely on runtime regeneration.
-- Keep the mod private and player-centered.
 - Avoid forced admin checks.
 - Keep grouping logic rule-based rather than hard-coded to a tiny list of known blocks.
 - Use the public progression API; do not attempt to bypass game restrictions through prohibited internals.
 
 ## Maintainer notes
 
-This project is intentionally narrow in scope: stay compatible with the game’s research model, keep the grouping logic consistent with the base game, and preserve the private nature of the mod. The generated data files are part of the build output, but the real logic lives in the split rules and mod script.
+This project is intentionally narrow in scope: stay compatible with the game’s research model, keep the grouping logic consistent with the base game. The generated data files are part of the build output, but the real logic lives in the split rules and mod script.
