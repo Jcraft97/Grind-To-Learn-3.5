@@ -1,6 +1,6 @@
 # AGENTS.md
 
-This repository is the private Grind to Learn mod for Space Engineers. Use the rules in this file when making changes or reviewing work related to the mod.
+This repository is the Grind to Learn 3.5 mod for Space Engineers. Use the rules in this file when making changes or reviewing work related to the mod.
 
 ## Mission
 
