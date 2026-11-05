@@ -971,7 +971,10 @@ namespace GrindToLearn3
 
 		private bool MyResearchUnlock(MyDefinitionId blockId, long playerId)
 		{
-			Log("MyResearchUnlock " + blockId + " " + playerId);
+			Log("MyResearchUnlock begin block=" + blockId + " playerId=" + playerId +
+				" isServer=" + MyAPIGateway.Session.IsServer +
+				" gameMode=" + MyAPIGateway.Session.SessionSettings.GameMode +
+				" enableResearch=" + MyAPIGateway.Session.SessionSettings.EnableResearch);
 
 			MyDefinitionId unlockerId;
 			if (!unlockers.TryGetValue(blockId, out unlockerId))
@@ -980,8 +983,18 @@ namespace GrindToLearn3
 				return false;
 			}
 
-			Log("UnlockWithUnlocker playerId=" + playerId + " unlockerId=" + unlockerId);
-			MyVisualScriptLogicProvider.PlayerResearchUnlock(playerId, unlockerId);
+			Log("MyResearchUnlock mapped block=" + blockId + " unlockerId=" + unlockerId);
+			try
+			{
+				MyVisualScriptLogicProvider.PlayerResearchUnlock(playerId, unlockerId);
+				Log("MyResearchUnlock API returned block=" + blockId + " unlockerId=" + unlockerId +
+					"; PlayerResearchUnlock has no return value, so acceptance is unknown.");
+			}
+			catch(Exception e)
+			{
+				Utilities.LogException("PlayerResearchUnlock failed:", blockId.ToString(), e);
+				return false;
+			}
 
 			return true;
 		}
@@ -990,6 +1003,8 @@ namespace GrindToLearn3
 		{
 			if(!IsGTLCommand(messageText)) return;
 
+			Log("Chat command received senderSteamId=" + sender + " text=" + messageText +
+				" isServer=" + MyAPIGateway.Session.IsServer);
 			sendToOthers = false;
 			if(messageText.Length > 512)
 			{
@@ -1012,7 +1027,9 @@ namespace GrindToLearn3
 		{
 			if(channel != ChatCommandChannel || fromServer || message == null || message.Length > 512) return;
 
-			ProcessChatCommand(sender, Encoding.UTF8.GetString(message));
+			string messageText = Encoding.UTF8.GetString(message);
+			Log("Chat command received from server message handler senderSteamId=" + sender + " text=" + messageText);
+			ProcessChatCommand(sender, messageText);
 		}
 
 		private static bool IsGTLCommand(string message)
@@ -1040,6 +1057,8 @@ namespace GrindToLearn3
 			int separator = arguments.IndexOfAny(new char[] { ' ', '\t', '\r', '\n' });
 			string action = separator < 0 ? arguments : arguments.Substring(0, separator);
 			string blockName = separator < 0 ? string.Empty : arguments.Substring(separator).Trim();
+			Log("Processing command senderSteamId=" + sender + " identityId=" + player.IdentityId +
+				" action='" + action + "' blockName='" + blockName + "'");
 
 			if(action.Equals("help", StringComparison.OrdinalIgnoreCase) ||
 				string.IsNullOrEmpty(action))
@@ -1078,6 +1097,7 @@ namespace GrindToLearn3
 					matches.Add(block);
 			}
 
+			Log("Command block match count=" + matches.Count + " query='" + blockName + "'");
 			if(matches.Count == 0)
 			{
 				RespondToPlayer(player.IdentityId, "No learned block group matches '" + blockName + "'.");
@@ -1105,6 +1125,23 @@ namespace GrindToLearn3
 				RespondToPlayer(player.IdentityId, "No progression unlocker is registered for that block.");
 				return;
 			}
+
+			MyResearchBlockDefinition researchBlock = MyDefinitionManager.Static.GetResearchBlock(matches[0]);
+			Log("Command match block=" + matches[0] + " unlocker=" + unlocker +
+				" researchBlockExists=" + (researchBlock != null) +
+				" unlockedByGroups=" + (researchBlock == null ? "<missing>" : string.Join(",", researchBlock.UnlockedByGroups)));
+			if(researchBlock != null)
+			{
+				foreach(string groupName in researchBlock.UnlockedByGroups)
+				{
+					MyResearchGroupDefinition researchGroup = MyDefinitionManager.Static.GetResearchGroup(groupName);
+					Log("Command research group=" + groupName + " exists=" + (researchGroup != null) +
+						" members=" + (researchGroup == null ? "<missing>" : string.Join(",", researchGroup.Members.Select(member => member.ToString()).ToArray())));
+				}
+			}
+			MyCubeBlockDefinition unlockerDefinition = MyDefinitionManager.Static.GetCubeBlockDefinition(unlocker);
+			Log("Command unlocker definition exists=" + (unlockerDefinition != null) +
+				" id=" + (unlockerDefinition == null ? "<missing>" : unlockerDefinition.Id.ToString()));
 
 			if(learn)
 			{
