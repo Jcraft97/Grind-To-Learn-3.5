@@ -969,9 +969,10 @@ namespace GrindToLearn3
 				// We are useless without the "progression" enabled.
 		}
 
-		private bool MyResearchUnlock(MyDefinitionId blockId, long playerId)
+		// Keep chat Learn and grinder learning on the same player research API path.
+		private bool UnlockResearchGroupForPlayer(MyDefinitionId blockId, long playerId)
 		{
-			Log("MyResearchUnlock begin block=" + blockId + " playerId=" + playerId +
+			Log("UnlockResearchGroupForPlayer begin block=" + blockId + " playerId=" + playerId +
 				" isServer=" + MyAPIGateway.Session.IsServer +
 				" gameMode=" + MyAPIGateway.Session.SessionSettings.GameMode +
 				" enableResearch=" + MyAPIGateway.Session.SessionSettings.EnableResearch);
@@ -983,11 +984,11 @@ namespace GrindToLearn3
 				return false;
 			}
 
-			Log("MyResearchUnlock mapped block=" + blockId + " unlockerId=" + unlockerId);
+			Log("UnlockResearchGroupForPlayer mapped block=" + blockId + " unlockerId=" + unlockerId);
 			try
 			{
 				MyVisualScriptLogicProvider.PlayerResearchUnlock(playerId, unlockerId);
-				Log("MyResearchUnlock API returned block=" + blockId + " unlockerId=" + unlockerId +
+				Log("UnlockResearchGroupForPlayer API returned block=" + blockId + " unlockerId=" + unlockerId +
 					"; PlayerResearchUnlock has no return value, so acceptance is unknown.");
 			}
 			catch(Exception e)
@@ -1145,8 +1146,12 @@ namespace GrindToLearn3
 
 			if(learn)
 			{
-				MyResearchUnlock(matches[0], player.IdentityId);
-				RespondToPlayer(player.IdentityId, "Learn request sent for " + matches[0].ToString() + ".");
+				if(!UnlockResearchGroupForPlayer(matches[0], player.IdentityId))
+				{
+					RespondToPlayer(player.IdentityId, "Could not dispatch Learn request for " + matches[0].ToString() + ". Check the Space Engineers log.");
+					return;
+				}
+				RespondToPlayer(player.IdentityId, "Learn request dispatched for " + matches[0].ToString() + ".");
 			}
 			else
 			{
@@ -1232,7 +1237,7 @@ namespace GrindToLearn3
 						
 				// FIXME no message here :(
 				foreach (var player in players)
-				{	MyResearchUnlock(blockId, player.IdentityId);
+				{	UnlockResearchGroupForPlayer(blockId, player.IdentityId);
 				}
 				return;
 			}
@@ -1245,7 +1250,7 @@ namespace GrindToLearn3
 			foreach(var research in researchList)
 			{	if(!research.unlockOnPlayerConnected) continue;
 
-				MyResearchUnlock(research.firstBlock, playerId);
+				UnlockResearchGroupForPlayer(research.firstBlock, playerId);
 			}
 
 			Log("/OnPlayerConnected");
@@ -1332,14 +1337,14 @@ namespace GrindToLearn3
 			{
 				if(datapads.TryGet(content, out blockId))
 				{
-					return MyResearchUnlock(blockId, ownerId);
+					return UnlockResearchGroupForPlayer(blockId, ownerId);
 				}
 			}
 			else
 			{	// QUANTIUM SECURITY VULNERABILITY!
 				if(DecryptResearch(content, out blockId) && blockId != null)
 				{
-					return MyResearchUnlock(blockId, ownerId);
+					return UnlockResearchGroupForPlayer(blockId, ownerId);
 				}
 			} 
 			
