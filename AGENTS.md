@@ -79,3 +79,8 @@ When updating the mod:
 - Do not make the mod admin-only.
 - Do not hardcode new blocks without checking the split normalization rules first.
 - Prefer rule-based fixes over brittle one-off block exceptions.
+- Always document info in the `README` and the `AGENTS` files, do not override preexisting info with approval.
+
+## Git commits
+
+After completing the requested work, commit the task-related changes by default; do not wait for the user to ask for a commit. Preserve pre-existing unrelated work by leaving it unstaged and out of the commit. Then push the commit. If a commit cannot be created, report the specific blocker and the uncommitted state.
