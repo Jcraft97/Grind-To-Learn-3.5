@@ -33,6 +33,10 @@ Do not add ad hoc one-off exceptions unless the pattern clearly cannot be expres
 
 `regenerate.py` is not run by the game. It is an offline generator used to create SBC outputs. If a change is made to the split program or generated data, update the generated files intentionally and keep the workflow reproducible.
 
+This tool is currently known to be inconsistent. It can rewrite or drop research state in ways that make learned block group assignments appear to vanish or drift if the generated output is not kept synchronized. This is a known maintenance problem and should be treated as a future cleanup item rather than a normal runtime dependency.
+
+For now, treat `regenerate.py` as a fragile manual build step only. Do not assume it is safe to run without verifying the generated output. A future fix will standardize the generation pipeline so it stops silently forgetting learned groups.
+
 ### 3. Stay within the public API surface
 
 The Space Engineers modding environment rejects direct access to `MySessionComponentResearch` and similar prohibited members. This is non-negotiable. Any implementation must stay compatible with the whitelisted API list.
@@ -81,6 +85,6 @@ When updating the mod:
 - Prefer rule-based fixes over brittle one-off block exceptions.
 - Always document info in the `README` and the `AGENTS` files, do not override preexisting info with approval.
 
-## Git commits
+# Git commits
 
 After completing the requested work, commit the task-related changes by default; do not wait for the user to ask for a commit. Preserve pre-existing unrelated work by leaving it unstaged and out of the commit. Then push the commit. If a commit cannot be created, report the specific blocker and the uncommitted state.

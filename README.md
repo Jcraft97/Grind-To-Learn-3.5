@@ -53,6 +53,14 @@ Important rule:
 - Keep generated SBCs in sync by running the script manually when data or grouping rules are intentionally changed.
 - Treat the script as a build step, not as a runtime feature.
 
+### Known issue: generation is inconsistent
+
+`regenerate.py` is intentionally a manual build tool, but it is currently inconsistent in practice. It can regenerate or overwrite content in a way that silently drops or mismatches learned block assignments if the source data or the generated output is not kept in a stable state.
+
+This is a known project issue and is not something the runtime should depend on. The current design assumes that generated SBC files are kept consistent by the maintainer, and future work will standardize or replace the generation flow so that it does not forget or rewrite learned groups unexpectedly.
+
+This is specifically called out because the file is not a runtime mechanism and should not be treated as a source of truth during gameplay. The fix is planned later, but the current guidance is to treat it as a fragile offline generation step that must be kept under control manually.
+
 ## Runtime commands
 
 The mod includes in-game chat commands for toggling the player’s research state without requiring admin-only permissions. The intent is to align with the player’s own progression and the default leveling/research model used by Space Engineers.
