@@ -64,7 +64,7 @@ For now, treat `regenerate.py` as a fragile manual build step only. Do not assum
 
 The Space Engineers modding environment rejects direct access to `MySessionComponentResearch` and similar prohibited members. This is non-negotiable. Any implementation must stay compatible with the whitelisted API list.
 
-### 4. Keep the mod private and player accessible
+### 4. Keep the mod layer accessible
 
 Do not gate behavior behind admin-only checks. The mod should operate on the current player’s own progression state. The chat commands should not require server admin rights.
 
