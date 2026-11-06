@@ -8,35 +8,24 @@ MyObjectBuilder=
 (.*)/= # removing block type
 \dx\dx\d= \dx\d= x\d+= \d+= # removing digits
 
-M Cockpit ^(LargeBlockCockpitSeat|SmallBlockCockpit|DBSmallBlockFighterCockpit|SmallBlockCapCockpit)$=Cockpit
-M Cockpit ^(Large|Small)BlockCockpitIndustrial$=Cockpit
-M Cockpit ^(Large|Small)BlockOpenSlopedCockpit$=Cockpit
-M Cockpit ^(Large|Small)BlockClosedSlopedCockpit$=Cockpit
-SmallBlockFlushCockpit=Cockpit
 
-Large= Small=
-DISABLE Prototech
-
-# Normalize cockpit variants into one research group
-M Cockpit Speeder= Open= Standing= Rover= Buggy= Compact=
-SuspendedControlSeat(|B)$=Cockpit
 
 IGNORE Plushie$
 DISABLE Dead(Astronaut|Body)
+DISABLE Prototech
 
-IFMOD Eat..Drink..Sleep
-UNLOCK EmergencyFoodproduction
+# Cockpits with oxygen
+M Cockpit ^(LargeBlockCockpitSeat|SmallBlockCockpit|DBSmallBlockFighterCockpit|SmallBlockCapCockpit)$=COCKPIT_OXYGEN
+Large= Small=
+M Cockpit ^BlockCockpitIndustrial$=COCKPIT_OXYGEN
+M Cockpit ^BlockClosedSlopedCockpit$=COCKPIT_OXYGEN
+BlockFlushCockpit=COCKPIT_OXYGEN
 
-IFMOD Exploration.Enhancement.Mod
-^EEMPilotedFighterCockpit=Cockpit
-^EEMPiloted.*=Cockpit
-^EEMHiddenAntenna$=Antenna
 
-IFMOD Energy.Shields
-Shield(Capacitor|FluxCoil)=shield_mods
-M ShieldGenerator Micro=
-
-IFMOD . # always true
+# Cockpits with no oxygen
+M Cockpit Speeder= Open= Standing= Rover= Buggy= Compact= 
+SuspendedControlSeat(|B)$=Cockpit
+M Cockpit ^BlockSlopedCockpit$=Cockpit
 
 @ ^ArmorCenter$ ^ArmorCorner$ ^ArmorInvCorner$ ^ArmorSide$ # Blast doors
 
@@ -63,7 +52,8 @@ M Suspension Offroad= ^Suspension$=WHEELS
 
 # interior blocks
 M Wall Interior= Cover= Passage= (A|B)$= 
-M Passage Light=
+M Passage Light= Window=
+M Corridor Light= Window= 
 M Duct Light=
 M AtmosphericThrust Flat= DShape=
 
@@ -98,7 +88,8 @@ M RefillStation Inset=
 
 # safe things
 @ Bridge
-M Passage Window= # not window block
+# M Passage Window= # not window block
+# M Corridor Window= # not window block
 @ Window
 @ Symbol WarningSign FloorPlanSign
 @ Catwalk Railing GratedStairs ^Ladder$ 
