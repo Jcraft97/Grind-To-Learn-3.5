@@ -1,8 +1,5 @@
 modlist = [
-    2547246713, # Eat. Drink. Sleep. Repeat!
-    531659576, # [EEM] Exploration Enhancement Mod
-    484504816, # Energy Shields
-    3154371364, # WeaponCore
+    2298956701, # Concrete Mod
 ]
 
 import xml.etree.ElementTree as ET
@@ -178,7 +175,8 @@ def get_all_block_types_from_zip(zip_pathname, keyword, root_must_be = None):
 
     zf = glob.glob(zip_pathname)
 
-    if(len(zf) != 1): return None
+    if len(zf) != 1:
+        return result
     zf = zf[0]
     
     print("OLD MOD FORMAT");

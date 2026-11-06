@@ -14,6 +14,12 @@ IGNORE Plushie$
 IGNORE Dead(Astronaut|Body)
 IGNORE Prototech
 
+IFMOD AQD.-.Concrete
+LG= AQD= 
+M Conc Sloped= Slope= Raised= Round= Transition= Base= Tip= Inv= Square= Half= Corner= erted= Block= Armor=
+
+IFMOD . # always true
+
 # Cockpits with oxygen
 M Cockpit ^(LargeBlockCockpitSeat|SmallBlockCockpit|DBSmallBlockFighterCockpit|SmallBlockCapCockpit)$=COCKPIT_OXYGEN
 Large= Small= # remove tags
@@ -67,7 +73,7 @@ M Door Sliding= Slide= Side= Hatch= Narrow= EvenWide= Lab= Inv$= Glass= Centred=
 M Door ^CorridorRoundDoor$=Door
 M Conveyor Converter= Hub= Pipe= Junction= Flange= Sorter= Duct= Tube= Seamless= End= Cap= Curved= Intersection= Frame= Ship= T$=
 M CableRun (Style|Long)=
-M Floor Slab= Passage=
+M Floor Slab= Passage= Edge= Decal=
 M ^Pipes (Junction|Inner|Outer|Straight|End)=
 M Rotor Advanced= 
 M Piston Top= Base=
@@ -99,7 +105,6 @@ M Cover (Fire|Wall)=
 @ LCD TextPanel ^Billboard(Round|)
 @ ^AirVent ExhaustPipe ExhaustCap HeatVent
 @ ^Console$ ^ConsoleModule TargetDummy StatueEngineer ^Desk Kitchen ^Bed Bed$ Bench PassengerSeat LockerRoom Planters Couch Toilet FoodDispenser LabEquipment Shower Bathroom MedicalStation FirstAidCabinet WeaponRack BarCounter ^FlareLauncher$ Plushie CaptainDesk ^Lab(Desk|Sink|Cabinet) ^Freezer$ Vivarium ^Inset(Terra|Aqua|Planter|Button|Enter|Book)
-M Floor Edge= Decal=
 @ Passage Pillar Column ^AirDuct PipeWork. Corridor Wall ^ServerRack$
 @ ^(AlgaeFarm|FarmPlot|FoodProcessor|IrrigationSystem)$
 
@@ -122,6 +127,13 @@ M ControlPanel Pedestal=
 ^(TurretControl|EmotionController|PathRecorder|BasicMission|FlightMovement|OffensiveCombat|DefensiveCombat|RemoteControl)$=AI_BLOCKS
 M BulkContainer ^Bulk= [ABC]$=
 @ ^Timer$ ^EventController$
+
+# Weapons
+M Gatling (Turret|Gun)=
+M Missile (Turret|Launcher|Reload)=
+
+Autocannon=AutoCannonTurret # bad fix?
+M Calibre (Turret|Gun)=
 
 # DUMP # prints curent block list to log
 # DISABLE WHEELS ECONOMY # example

@@ -56,6 +56,7 @@ Available behavior is based on the public research API and player identity:
 - `/gtl learn <group-or-block>`
 - `/gtl unlearn <group-or-block>`
 
+Use the runtime research group ID (for example, `U12`) or a member block's subtype or `Type/Subtype` ID. A block member resolves to its entire research group.
 
 These commands dont require admin power. 
 

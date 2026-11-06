@@ -1073,7 +1073,7 @@ namespace GrindToLearn3
 			if(action.Equals("help", StringComparison.OrdinalIgnoreCase) ||
 				string.IsNullOrEmpty(action))
 			{
-				RespondToPlayer(player.IdentityId, "GTL: /gtl learn <block> or /gtl unlearn <block>. Use subtype or Type/Subtype; this changes the block's whole research group.");
+				RespondToPlayer(player.IdentityId, "GTL: /gtl learn|unlearn <group-or-block>. Use a research group ID, subtype, or Type/Subtype; this changes the whole research group.");
 				return;
 			}
 
@@ -1090,13 +1090,26 @@ namespace GrindToLearn3
 
 			if(string.IsNullOrEmpty(blockName))
 			{
-				RespondToPlayer(player.IdentityId, "Specify a block subtype or Type/Subtype ID. Use /gtl help.");
+				RespondToPlayer(player.IdentityId, "Specify a research group ID, block subtype, or Type/Subtype ID. Use /gtl help.");
 				return;
 			}
 
 			List<MyDefinitionId> matches = new List<MyDefinitionId>();
 			foreach(var block in unlockers.Keys)
 			{
+				MyResearchBlockDefinition groupResearchBlock = MyDefinitionManager.Static.GetResearchBlock(block);
+				if(groupResearchBlock == null || !groupResearchBlock.UnlockedByGroups.Any(groupName =>
+					groupName.Equals(blockName, StringComparison.OrdinalIgnoreCase)))
+					continue;
+
+				matches.Add(block);
+				break;
+			}
+
+			foreach(var block in unlockers.Keys)
+			{
+				if(matches.Count > 0) break;
+
 				var definition = MyDefinitionManager.Static.GetCubeBlockDefinition(block);
 				string subtype = block.SubtypeName.ToString();
 
@@ -1164,7 +1177,7 @@ namespace GrindToLearn3
 			else
 			{
 				MyVisualScriptLogicProvider.PlayerResearchLock(researchIdentityId, unlocker);
-				RespondToPlayer(player.IdentityId, "Unlearn request sent for " + matches[0].ToString() + ". Space Engineers may retain build access until progression is reset.");
+				RespondToPlayer(player.IdentityId, "Unlearn request sent for " + matches[0].ToString() + ". Please reload your save to see the effect.");
 			}
 		}
 

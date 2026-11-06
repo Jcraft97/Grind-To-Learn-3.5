@@ -60,6 +60,8 @@ The “unlearn” action may be limited by the game’s progression cache or oth
 
 Observed in-game behavior: `/gtl learn` takes effect immediately, while `/gtl unlearn` does not fully revoke build access until the world is saved and reloaded. Treat save/reload as required for unlearn changes to take effect, and do not bypass the public API to force an immediate lock.
 
+Chat commands accept a runtime research group ID (such as `U12`) or a member block subtype or `Type/Subtype` ID. Resolving a member block applies the action to its whole research group.
+
 ## Files you may need to touch
 
 - `Data/SPLIT_PROGRAM.txt` — grouping and normalization logic.
