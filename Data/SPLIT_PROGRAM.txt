@@ -62,7 +62,7 @@ Industrial= SciFi= Warfare= Reskin=
 M HangarDoor Airtight= [A-C]$=
 ^Gate$=HangarDoor # same thing
 
-M Door Sliding= Slide= Side= Hatch= Narrow= EvenWide= Lab= Inv$= Glass= Centred= [ABC]$=
+M Door Sliding= Slide= Side= Hatch= Narrow= EvenWide= Lab= Inv$= Glass= Centred= [ABC]$= ^CorridorRoundDoor$=
 M Conveyor Converter= Hub= Pipe= Junction= Flange= Sorter= Duct= Tube= Seamless= End= Cap= Curved= Intersection= Frame= Ship= T$=
 M CableRun (Style|Long)=
 M Rotor Advanced= # split?
