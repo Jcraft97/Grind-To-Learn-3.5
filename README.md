@@ -2,6 +2,8 @@
 
 This is a fork of this mod from SE `https://steamcommunity.com/sharedfiles/filedetails/?id=3207654953`. 
 
+This is an updated version with some new features.
+
 Grind to Learn is a Space Engineers mod that turns the base game’s research system into a grind-to-learn progression model. This means that the only way for the player to "learn" new blocks to build is by grinding down a existing block in the world.
 
 This mod is player-centric. It follows the normal player progression flow and uses the player’s own identity and research state.
