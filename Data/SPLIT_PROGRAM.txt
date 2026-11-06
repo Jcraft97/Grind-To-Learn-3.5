@@ -3,7 +3,7 @@ D M MATCH
 D @ GROUP
 
 [_\s]= # useless chars
-MyObjectBuilder=
+MyObjectBuilder= # remove tag
 ^(.+)/\(null\)$=$1 # convert type/(null) to /type
 (.*)/= # removing block type
 \dx\dx\d= \dx\d= x\d+= \d+= # removing digits
@@ -11,12 +11,12 @@ MyObjectBuilder=
 
 
 IGNORE Plushie$
-DISABLE Dead(Astronaut|Body)
-DISABLE Prototech
+IGNORE Dead(Astronaut|Body)
+IGNORE Prototech
 
 # Cockpits with oxygen
 M Cockpit ^(LargeBlockCockpitSeat|SmallBlockCockpit|DBSmallBlockFighterCockpit|SmallBlockCapCockpit)$=COCKPIT_OXYGEN
-Large= Small=
+Large= Small= # remove tags
 M Cockpit ^BlockCockpitIndustrial$=COCKPIT_OXYGEN
 M Cockpit ^BlockClosedSlopedCockpit$=COCKPIT_OXYGEN
 BlockFlushCockpit=COCKPIT_OXYGEN
@@ -29,7 +29,7 @@ M Cockpit ^BlockSlopedCockpit$=Cockpit
 
 @ ^ArmorCenter$ ^ArmorCorner$ ^ArmorInvCorner$ ^ArmorSide$ # Blast doors
 
-# buzz words
+# Remove buzz words
 Block= Half= Short= Medium= Inverted= Angled= Left= Right= Colorable= Corner= Center= Offset= Modular= [Mm]irrored= Cylindrical=
 
 # synonyms
@@ -51,21 +51,25 @@ M Wheel Offroad= Real= ^Wheel$=WHEELS
 M Suspension Offroad= ^Suspension$=WHEELS
 
 # interior blocks
-M Wall Interior= Cover= Passage= (A|B)$= 
+M Wall Interior= Passage= (A|B)$= 
 M Passage Light= Window=
 M Corridor Light= Window= 
 M Duct Light=
 M AtmosphericThrust Flat= DShape=
 
+# Group variants together
 Industrial= SciFi= Warfare= Reskin=
 
 M HangarDoor Airtight= [A-C]$=
 ^Gate$=HangarDoor # same thing
 
-M Door Sliding= Slide= Side= Hatch= Narrow= EvenWide= Lab= Inv$= Glass= Centred= [ABC]$= ^CorridorRoundDoor$=
+M Door Sliding= Slide= Side= Hatch= Narrow= EvenWide= Lab= Inv$= Glass= Centred= [ABC]$= 
+M Door ^CorridorRoundDoor$=Door
 M Conveyor Converter= Hub= Pipe= Junction= Flange= Sorter= Duct= Tube= Seamless= End= Cap= Curved= Intersection= Frame= Ship= T$=
 M CableRun (Style|Long)=
-M Rotor Advanced= # split?
+M Floor Slab= Passage=
+M ^Pipes (Junction|Inner|Outer|Straight|End)=
+M Rotor Advanced= 
 M Piston Top= Base=
 M Light (Offset|Panel|corner|Rotating|Front|AirDuct|Troffer|Inv|Round|Square|Inset)=
 Floodlight.*=Light
@@ -86,18 +90,17 @@ M Collector Flat=
 M RefillStation Inset=
 ^CargoTerminal$=Container
 
-# safe things
+# Big Groups
 @ Bridge
-# M Passage Window= # not window block
-# M Corridor Window= # not window block
-@ Window
+@ Window Viewport 
 @ Symbol WarningSign FloorPlanSign
-@ Catwalk Railing GratedStairs ^Ladder$ 
+M Cover (Fire|Wall)=
+@ Catwalk Railing GratedStairs Ladder Stairs ^Ramp Cover Embrasure
 @ LCD TextPanel ^Billboard(Round|)
 @ ^AirVent ExhaustPipe ExhaustCap HeatVent
-@ ^Console$ ^ConsoleModule TargetDummy StatueEngineer ^Desk Kitchen ^Bed Bed$ Bench PassengerSeat LockerRoom Planters Couch Toilet FoodDispenser LabEquipment Shower Bathroom MedicalStation FirstAidCabinet WeaponRack BarCounter ^FlareLauncher$ Plushie CaptainDesk ^Lab(Desk|Sink|Cabinet) ^Freezer$ Vivarium ^Inset(Terra|Aqua|Planter)
+@ ^Console$ ^ConsoleModule TargetDummy StatueEngineer ^Desk Kitchen ^Bed Bed$ Bench PassengerSeat LockerRoom Planters Couch Toilet FoodDispenser LabEquipment Shower Bathroom MedicalStation FirstAidCabinet WeaponRack BarCounter ^FlareLauncher$ Plushie CaptainDesk ^Lab(Desk|Sink|Cabinet) ^Freezer$ Vivarium ^Inset(Terra|Aqua|Planter|Button|Enter|Book)
 M Floor Edge= Decal=
-@ Passage Stairs Ramp Pillar FireCover Embrasure Viewport LadderShaft Column ^AirDuct PipeWork. Wall Corridor Floor ^Pipes ^ServerRack$ ^CableRun$
+@ Passage Pillar Column ^AirDuct PipeWork. Corridor Wall ^ServerRack$
 @ ^(AlgaeFarm|FarmPlot|FoodProcessor|IrrigationSystem)$
 
 @ ^Structural(Frame|Support|Platform).*$
@@ -106,7 +109,7 @@ M GravityGenerator Sphere=
 ^(VirtualMass|GravityGenerator|SpaceBall)$=GRAVITY
 ^(ShipGrinder|ShipWelder)$=CONSTRUCTION
 
-M Antenna Dish= Radio= Compact=
+M Antenna Dish= Radio= Compact= Laser=
 (Beacon|BroadcastController|Transponder)=Antenna
 
 M ButtonPanel Pedestal= Vertical=

@@ -1,3 +1,5 @@
+# This is a file of all the block names in the game as of 11/6/2026. This file is not used in the code.
+
 MyObjectBuilder_Drill/LargeBlockDrillReskin
 MyObjectBuilder_Drill/SmallBlockDrillReskin
 MyObjectBuilder_ShipGrinder/LargeShipGrinderReskin
