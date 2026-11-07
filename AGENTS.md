@@ -13,7 +13,10 @@ Keep the mod aligned with the base game’s progression model, maintain correct 
 - `Data/SPLIT_PROGRAM.txt` is the source of truth for how block names are reduced into research groups.
 - `Data/regenerate.py` is a manual generator and should not be treated as runtime code.
 - `Data/Scripts/GTL/GTL.cs` is the runtime logic for the mod.
+- `Data/Scripts/GTL/GTL.csproj` targets .NET Framework 4.6.1 and includes `Microsoft.NETFramework.ReferenceAssemblies` so the target framework can be built with the .NET SDK.
 - The mod uses the public Space Engineers progression API; do not reach through prohibited internal APIs.
+
+To build the C# project from the repository root, run `dotnet build "Data/Scripts/GTL/GTL.csproj"`. The Space Engineers assembly references in the project use the default Steam installation path and must be adjusted if the game is installed elsewhere.
 
 ### The game files that we are overriding:
 

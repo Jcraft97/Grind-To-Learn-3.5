@@ -23,6 +23,16 @@ This mod is player-centric. It follows the normal player progression flow and us
 - `Data/regenerate.py` — offline generation script; not runtime code.
 - `Data/Scripts/GTL/GTL.cs` — main runtime script for progression, grind logic, command handling, and integration with the game.
 
+## Build the C# script
+
+The runtime project targets .NET Framework 4.6.1 and uses the `Microsoft.NETFramework.ReferenceAssemblies` NuGet package to provide its targeting assemblies during restore. With the .NET SDK installed, build it from the repository root with:
+
+```powershell
+dotnet build "Data/Scripts/GTL/GTL.csproj"
+```
+
+The project also references Space Engineers assemblies from `C:\Program Files (x86)\Steam\steamapps\common\SpaceEngineers\Bin64`. If the game is installed elsewhere, update those reference paths in `GTL.csproj` before building.
+
 ## Block grouping model
 
 `Data/SPLIT_PROGRAM.txt` is the important file. It uses pattern rules to collapse many variants into a single progression family.
